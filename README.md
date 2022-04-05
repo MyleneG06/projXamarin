@@ -30,14 +30,29 @@ Voici notre projet d'application **Xamarin** ...
 
 
 
-## Accueil
+## Liste
 ...
+<p align="center">
+  <img src="./Conceptions/Exportations/maquette_list_mangas.png" alt="AnimApp" width="200" height="auto"/>
+</p>
+
+
 
 ### Profile 
 La page **profile** ...
+<p align="center">
+  <img src="./Conceptions/Exportations/maquette_view_infos.png" alt="AnimApp" width="200" height="auto"/>
+</p>
 
-### Menu
-Le **menu burger** ...
+### Options
+Les **Options ...**
+
+La page **profile** ...
+<p align="center">
+  <img src="./Conceptions/Exportations/maquette_list_mangas_options.png" alt="AnimApp" width="200" height="auto"/>
+</p>
+
+
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
