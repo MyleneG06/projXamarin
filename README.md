@@ -69,17 +69,10 @@ Pour les conventions de nommage, nous vous redirigieons vers les bonnes pratique
 Pour la dcumentation API voir le lien ci-après : https://kitsu.docs.apiary.io/#introduction/json:api
 
 ## Roadmap
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 Voir la page [Issues](https://github.com/MyleneG06/projXamarin/issues) pour une liste de toute les fonctionnalitées proposées et des problèmes connus ainsi que la page 
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 [Project](https://github.com/users/MyleneG06/projects/2) pour la répartition des tâches dans l'équipe.
 
 
 ## Licence
 Distributed under the GNU General Public License v3.0. See [LICENSE]() for more information (cf. [Choose an open source license](https://choosealicense.com/)).
 
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-<p align="center">
-  <img src="https://media.kitsu.io/anime/poster_images/1/large.jpg" alt="AnimApp" width="500" height="auto"/>
-</p>
