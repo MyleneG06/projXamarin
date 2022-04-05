@@ -1,7 +1,7 @@
 # projXamarin
 
 
-Projet fait par Kevin POUZAUD, Vincent CATALAYUD, Yassine AJROUD et Mylène GERVAISE pour la Licence Pro CDTL-DAM 2021-22
+Projet fait par Kevin POUZAUD, Vincent CALATAYUD, Yassine AJROUD et Mylène GERVAISE pour la Licence Pro CDTL-DAM 2021-22
 
 # Description
 
