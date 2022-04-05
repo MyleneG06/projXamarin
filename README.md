@@ -29,9 +29,11 @@ Voici notre projet d'application **Xamarin** ...
 </details>
 
 
+Notre objectif est de créer une application autour de la communauté des animés/mangas.
 
 ## Liste
-On arrive sur la liste d'animés, on peut basculer sur les mangas avec l'onglet.
+A l'ouverture de l'application, on arrive sur la liste d'animés, on peut basculer sur les mangas avec l'onglet.
+La première fonctionnalité consiste à sélectionner un élément pour le visualiser.
 
 <p align="center">
   <img src="./Conceptions/Exportations/maquette_list_mangas.png" alt="AnimApp" width="200" height="auto"/>
@@ -40,14 +42,18 @@ On arrive sur la liste d'animés, on peut basculer sur les mangas avec l'onglet.
 
 
 ### Item
-Quand on clique sur un item on voit le détail de l'élément sélectionner. On peut le partager et le liker.
+Quand on clique sur un item, on peut :
+ * voir le détail de l'élément sélectionné, 
+ * le partager et le liker
+ * pour les animés accéder à la bande annonce sur youtube
+ * s'il est disponible obtenir le titre en japonnais
 
 <p align="center">
   <img src="./Conceptions/Exportations/maquette_view_infos.png" alt="AnimApp" width="200" height="auto"/>
 </p>
 
 ### Options
-si on a le temps ...
+si on a le temps on voudrait faire une baree de recherche pour accéder plus rapidement à l'élément souhaité.
 <p align="center">
   <img src="./Conceptions/Exportations/maquette_list_mangas_options.png" alt="AnimApp" width="200" height="auto"/>
 </p>
