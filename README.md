@@ -18,9 +18,9 @@ Voici notre projet d'application **Xamarin** ...
 <details close>
   <summary>Table of Contents</summary>
   <ul>
-    <li><a href="#accueil">Page d'accueil</a></li>
-    <li><a href="#profile">Profile</a></li>
-    <li><a href="#menu">Menu</a></li>   
+    <li><a href="#liste">Liste</a></li>
+    <li><a href="#item">Item</a></li>
+    <li><a href="#options">Options</a></li>   
     <li><a href="#contribution">Contribution</a></li>
     <li><a href="#convention">Convention de nommage</a></li>
     <li><a href="#roadmap">RoadMap</a></li>
@@ -31,30 +31,29 @@ Voici notre projet d'application **Xamarin** ...
 
 
 ## Liste
-...
+On arrive sur la liste d'animés, on peut basculer sur les mangas avec l'onglet.
+
 <p align="center">
   <img src="./Conceptions/Exportations/maquette_list_mangas.png" alt="AnimApp" width="200" height="auto"/>
 </p>
 
 
 
-### Profile 
-La page **profile** ...
+### Item
+Quand on clique sur un item on voit le détail de l'élément sélectionner. On peut le partager et le liker.
+
 <p align="center">
   <img src="./Conceptions/Exportations/maquette_view_infos.png" alt="AnimApp" width="200" height="auto"/>
 </p>
 
 ### Options
-Les **Options ...**
-
-La page **profile** ...
+si on a le temps ...
 <p align="center">
   <img src="./Conceptions/Exportations/maquette_list_mangas_options.png" alt="AnimApp" width="200" height="auto"/>
 </p>
 
 
 
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 
 ## Contribution
