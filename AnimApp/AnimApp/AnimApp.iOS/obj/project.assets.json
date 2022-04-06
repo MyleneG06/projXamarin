@@ -991,27 +991,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\AM201959\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\boris\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\AM201959\\source\\repos\\AnimApp\\AnimApp\\AnimApp.iOS\\AnimApp.iOS.csproj",
+      "projectUniqueName": "C:\\Users\\boris\\Desktop\\PROJ\\projXamarin\\AnimApp\\AnimApp\\AnimApp.iOS\\AnimApp.iOS.csproj",
       "projectName": "AnimApp.iOS",
-      "projectPath": "C:\\Users\\AM201959\\source\\repos\\AnimApp\\AnimApp\\AnimApp.iOS\\AnimApp.iOS.csproj",
-      "packagesPath": "C:\\Users\\AM201959\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\AM201959\\source\\repos\\AnimApp\\AnimApp\\AnimApp.iOS\\obj\\",
+      "projectPath": "C:\\Users\\boris\\Desktop\\PROJ\\projXamarin\\AnimApp\\AnimApp\\AnimApp.iOS\\AnimApp.iOS.csproj",
+      "packagesPath": "C:\\Users\\boris\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\boris\\Desktop\\PROJ\\projXamarin\\AnimApp\\AnimApp\\AnimApp.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\AM201959\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\boris\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -1025,8 +1022,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\AM201959\\source\\repos\\AnimApp\\AnimApp\\AnimApp\\AnimApp.csproj": {
-              "projectPath": "C:\\Users\\AM201959\\source\\repos\\AnimApp\\AnimApp\\AnimApp\\AnimApp.csproj"
+            "C:\\Users\\boris\\Desktop\\PROJ\\projXamarin\\AnimApp\\AnimApp\\AnimApp\\AnimApp.csproj": {
+              "projectPath": "C:\\Users\\boris\\Desktop\\PROJ\\projXamarin\\AnimApp\\AnimApp\\AnimApp\\AnimApp.csproj"
             }
           }
         }

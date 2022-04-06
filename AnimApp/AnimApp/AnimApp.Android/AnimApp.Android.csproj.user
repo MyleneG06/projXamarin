@@ -3,5 +3,6 @@
   <PropertyGroup>
     <SelectedDevice>Samsung SM-A505FN</SelectedDevice>
     <ActiveDebugProfile>Samsung SM-A505FN</ActiveDebugProfile>
+    <DefaultDevice>pixel_2_pie_9_0_-_api_28</DefaultDevice>
   </PropertyGroup>
 </Project>

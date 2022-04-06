@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\AM201959\\source\\repos\\AnimApp\\AnimApp\\AnimApp.UWP\\AnimApp.UWP.csproj": {}
+    "C:\\Users\\boris\\Desktop\\PROJ\\projXamarin\\AnimApp\\AnimApp\\AnimApp.UWP\\AnimApp.UWP.csproj": {}
   },
   "projects": {
-    "C:\\Users\\AM201959\\source\\repos\\AnimApp\\AnimApp\\AnimApp.UWP\\AnimApp.UWP.csproj": {
+    "C:\\Users\\boris\\Desktop\\PROJ\\projXamarin\\AnimApp\\AnimApp\\AnimApp.UWP\\AnimApp.UWP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\AM201959\\source\\repos\\AnimApp\\AnimApp\\AnimApp.UWP\\AnimApp.UWP.csproj",
+        "projectUniqueName": "C:\\Users\\boris\\Desktop\\PROJ\\projXamarin\\AnimApp\\AnimApp\\AnimApp.UWP\\AnimApp.UWP.csproj",
         "projectName": "AnimApp.UWP",
-        "projectPath": "C:\\Users\\AM201959\\source\\repos\\AnimApp\\AnimApp\\AnimApp.UWP\\AnimApp.UWP.csproj",
-        "packagesPath": "C:\\Users\\AM201959\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\AM201959\\source\\repos\\AnimApp\\AnimApp\\AnimApp.UWP\\obj\\",
+        "projectPath": "C:\\Users\\boris\\Desktop\\PROJ\\projXamarin\\AnimApp\\AnimApp\\AnimApp.UWP\\AnimApp.UWP.csproj",
+        "packagesPath": "C:\\Users\\boris\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\boris\\Desktop\\PROJ\\projXamarin\\AnimApp\\AnimApp\\AnimApp.UWP\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\AM201959\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\boris\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -35,8 +33,8 @@
         "frameworks": {
           "uap10.0.16299": {
             "projectReferences": {
-              "C:\\Users\\AM201959\\source\\repos\\AnimApp\\AnimApp\\AnimApp\\AnimApp.csproj": {
-                "projectPath": "C:\\Users\\AM201959\\source\\repos\\AnimApp\\AnimApp\\AnimApp\\AnimApp.csproj"
+              "C:\\Users\\boris\\Desktop\\PROJ\\projXamarin\\AnimApp\\AnimApp\\AnimApp\\AnimApp.csproj": {
+                "projectPath": "C:\\Users\\boris\\Desktop\\PROJ\\projXamarin\\AnimApp\\AnimApp\\AnimApp\\AnimApp.csproj"
               }
             }
           }
@@ -89,22 +87,20 @@
         }
       }
     },
-    "C:\\Users\\AM201959\\source\\repos\\AnimApp\\AnimApp\\AnimApp\\AnimApp.csproj": {
+    "C:\\Users\\boris\\Desktop\\PROJ\\projXamarin\\AnimApp\\AnimApp\\AnimApp\\AnimApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\AM201959\\source\\repos\\AnimApp\\AnimApp\\AnimApp\\AnimApp.csproj",
+        "projectUniqueName": "C:\\Users\\boris\\Desktop\\PROJ\\projXamarin\\AnimApp\\AnimApp\\AnimApp\\AnimApp.csproj",
         "projectName": "AnimApp",
-        "projectPath": "C:\\Users\\AM201959\\source\\repos\\AnimApp\\AnimApp\\AnimApp\\AnimApp.csproj",
-        "packagesPath": "C:\\Users\\AM201959\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\AM201959\\source\\repos\\AnimApp\\AnimApp\\AnimApp\\obj\\",
+        "projectPath": "C:\\Users\\boris\\Desktop\\PROJ\\projXamarin\\AnimApp\\AnimApp\\AnimApp\\AnimApp.csproj",
+        "packagesPath": "C:\\Users\\boris\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\boris\\Desktop\\PROJ\\projXamarin\\AnimApp\\AnimApp\\AnimApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\AM201959\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\boris\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -156,7 +152,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     }

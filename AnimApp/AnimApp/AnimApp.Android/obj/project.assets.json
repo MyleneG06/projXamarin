@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "MonoAndroid,Version=v11.0": {
+    "MonoAndroid,Version=v10.0": {
       "System.Numerics.Vectors/4.5.0": {
         "type": "package",
         "compile": {
@@ -2135,56 +2135,53 @@
     }
   },
   "projectFileDependencyGroups": {
-    "MonoAndroid,Version=v11.0": [
+    "MonoAndroid,Version=v10.0": [
       "AnimApp >= 1.0.0",
       "Xamarin.Essentials >= 1.6.1",
       "Xamarin.Forms >= 5.0.0.2012"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\AM201959\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\boris\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\AM201959\\source\\repos\\AnimApp\\AnimApp\\AnimApp.Android\\AnimApp.Android.csproj",
+      "projectUniqueName": "C:\\Users\\boris\\Desktop\\PROJ\\projXamarin\\AnimApp\\AnimApp\\AnimApp.Android\\AnimApp.Android.csproj",
       "projectName": "AnimApp.Android",
-      "projectPath": "C:\\Users\\AM201959\\source\\repos\\AnimApp\\AnimApp\\AnimApp.Android\\AnimApp.Android.csproj",
-      "packagesPath": "C:\\Users\\AM201959\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\AM201959\\source\\repos\\AnimApp\\AnimApp\\AnimApp.Android\\obj\\",
+      "projectPath": "C:\\Users\\boris\\Desktop\\PROJ\\projXamarin\\AnimApp\\AnimApp\\AnimApp.Android\\AnimApp.Android.csproj",
+      "packagesPath": "C:\\Users\\boris\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\boris\\Desktop\\PROJ\\projXamarin\\AnimApp\\AnimApp\\AnimApp.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\AM201959\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\boris\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "monoandroid11.0"
+        "monoandroid10.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "monoandroid11.0": {
+        "monoandroid10.0": {
           "projectReferences": {
-            "C:\\Users\\AM201959\\source\\repos\\AnimApp\\AnimApp\\AnimApp\\AnimApp.csproj": {
-              "projectPath": "C:\\Users\\AM201959\\source\\repos\\AnimApp\\AnimApp\\AnimApp\\AnimApp.csproj"
+            "C:\\Users\\boris\\Desktop\\PROJ\\projXamarin\\AnimApp\\AnimApp\\AnimApp\\AnimApp.csproj": {
+              "projectPath": "C:\\Users\\boris\\Desktop\\PROJ\\projXamarin\\AnimApp\\AnimApp\\AnimApp\\AnimApp.csproj"
             }
           }
         }
       }
     },
     "frameworks": {
-      "monoandroid11.0": {
+      "monoandroid10.0": {
         "dependencies": {
           "Xamarin.Essentials": {
             "target": "Package",
