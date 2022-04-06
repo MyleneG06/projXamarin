@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Oy16Y0ksq6wxvmGtiPgP/sGlMQsv1FJ4zhdBapHMbYaNd8bSMhNMRcw2hmyQpXuX+Szw1V17RdGyzthSdUoX5w==",
+  "dgSpecHash": "6gXF0qEgW18rpZovrN+ZDAo7AM7KCKk765Aut+oTv5rbaRvDoquNpZ05ktPFe7FUs8W/DYSy+9eMiSJ0sOqWKA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\boris\\Desktop\\PROJ\\projXamarin\\AnimApp\\AnimApp\\AnimApp.iOS\\AnimApp.iOS.csproj",
+  "projectFilePath": "C:\\Users\\Yass\\Desktop\\projXamarin\\AnimApp\\AnimApp\\AnimApp.iOS\\AnimApp.iOS.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\boris\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
-    "C:\\Users\\boris\\.nuget\\packages\\xamarin.essentials\\1.6.1\\xamarin.essentials.1.6.1.nupkg.sha512",
-    "C:\\Users\\boris\\.nuget\\packages\\xamarin.forms\\5.0.0.2012\\xamarin.forms.5.0.0.2012.nupkg.sha512"
+    "C:\\Users\\Yass\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\Yass\\.nuget\\packages\\xamarin.essentials\\1.6.1\\xamarin.essentials.1.6.1.nupkg.sha512",
+    "C:\\Users\\Yass\\.nuget\\packages\\xamarin.forms\\5.0.0.2012\\xamarin.forms.5.0.0.2012.nupkg.sha512"
   ],
   "logs": []
 }

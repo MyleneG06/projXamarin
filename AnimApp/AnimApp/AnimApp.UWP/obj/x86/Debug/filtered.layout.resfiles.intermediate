@@ -1,4 +1,3 @@
-WinMetadata\Windows.winmd
 anime.png
 animes.png
 Assets\LargeTile.scale-100.png
@@ -37,3 +36,4 @@ manga.png
 mangas.png
 Properties\Default.rd.xml
 xamarin_logo.png
+WinMetadata\Windows.winmd

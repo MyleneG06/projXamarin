@@ -15,6 +15,7 @@ namespace AnimApp.Views
         public MangaPage()
         {
             InitializeComponent();
+            //BindingContext = new MangaPage();
         }
     }
 }

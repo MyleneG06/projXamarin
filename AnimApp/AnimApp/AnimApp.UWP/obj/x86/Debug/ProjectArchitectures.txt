@@ -1,1 +1,1 @@
-C:\Users\boris\Desktop\PROJ\projXamarin\AnimApp\AnimApp\AnimApp.UWP\AnimApp.UWP.csproj;x86
+C:\Users\Yass\Desktop\projXamarin\AnimApp\AnimApp\AnimApp.UWP\AnimApp.UWP.csproj;x86

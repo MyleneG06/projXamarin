@@ -6,5 +6,6 @@ namespace AnimApp.ViewModels
 {
     class MangaViewModel : BaseViewModel
     {
+        
     }
 }

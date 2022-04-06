@@ -9053,28 +9053,28 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\boris\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Users\\Yass\\.nuget\\packages\\": {},
+    "E:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\boris\\Desktop\\PROJ\\projXamarin\\AnimApp\\AnimApp\\AnimApp.UWP\\AnimApp.UWP.csproj",
+      "projectUniqueName": "C:\\Users\\Yass\\Desktop\\projXamarin\\AnimApp\\AnimApp\\AnimApp.UWP\\AnimApp.UWP.csproj",
       "projectName": "AnimApp.UWP",
-      "projectPath": "C:\\Users\\boris\\Desktop\\PROJ\\projXamarin\\AnimApp\\AnimApp\\AnimApp.UWP\\AnimApp.UWP.csproj",
-      "packagesPath": "C:\\Users\\boris\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\boris\\Desktop\\PROJ\\projXamarin\\AnimApp\\AnimApp\\AnimApp.UWP\\obj\\",
+      "projectPath": "C:\\Users\\Yass\\Desktop\\projXamarin\\AnimApp\\AnimApp\\AnimApp.UWP\\AnimApp.UWP.csproj",
+      "packagesPath": "C:\\Users\\Yass\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Yass\\Desktop\\projXamarin\\AnimApp\\AnimApp\\AnimApp.UWP\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\",
+        "E:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
         "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\boris\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\Yass\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "uap10.0.16299"
@@ -9086,8 +9086,8 @@
       "frameworks": {
         "uap10.0.16299": {
           "projectReferences": {
-            "C:\\Users\\boris\\Desktop\\PROJ\\projXamarin\\AnimApp\\AnimApp\\AnimApp\\AnimApp.csproj": {
-              "projectPath": "C:\\Users\\boris\\Desktop\\PROJ\\projXamarin\\AnimApp\\AnimApp\\AnimApp\\AnimApp.csproj"
+            "C:\\Users\\Yass\\Desktop\\projXamarin\\AnimApp\\AnimApp\\AnimApp\\AnimApp.csproj": {
+              "projectPath": "C:\\Users\\Yass\\Desktop\\projXamarin\\AnimApp\\AnimApp\\AnimApp\\AnimApp.csproj"
             }
           }
         }

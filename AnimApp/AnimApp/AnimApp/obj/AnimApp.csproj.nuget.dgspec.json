@@ -1,25 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\boris\\Desktop\\PROJ\\projXamarin\\AnimApp\\AnimApp\\AnimApp\\AnimApp.csproj": {}
+    "C:\\Users\\Yass\\Desktop\\projXamarin\\AnimApp\\AnimApp\\AnimApp\\AnimApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\boris\\Desktop\\PROJ\\projXamarin\\AnimApp\\AnimApp\\AnimApp\\AnimApp.csproj": {
+    "C:\\Users\\Yass\\Desktop\\projXamarin\\AnimApp\\AnimApp\\AnimApp\\AnimApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\boris\\Desktop\\PROJ\\projXamarin\\AnimApp\\AnimApp\\AnimApp\\AnimApp.csproj",
+        "projectUniqueName": "C:\\Users\\Yass\\Desktop\\projXamarin\\AnimApp\\AnimApp\\AnimApp\\AnimApp.csproj",
         "projectName": "AnimApp",
-        "projectPath": "C:\\Users\\boris\\Desktop\\PROJ\\projXamarin\\AnimApp\\AnimApp\\AnimApp\\AnimApp.csproj",
-        "packagesPath": "C:\\Users\\boris\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\boris\\Desktop\\PROJ\\projXamarin\\AnimApp\\AnimApp\\AnimApp\\obj\\",
+        "projectPath": "C:\\Users\\Yass\\Desktop\\projXamarin\\AnimApp\\AnimApp\\AnimApp\\AnimApp.csproj",
+        "packagesPath": "C:\\Users\\Yass\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Yass\\Desktop\\projXamarin\\AnimApp\\AnimApp\\AnimApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "E:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\boris\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\Yass\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
@@ -69,7 +69,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }
