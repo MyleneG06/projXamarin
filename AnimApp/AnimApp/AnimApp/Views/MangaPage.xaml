@@ -41,8 +41,7 @@
             </StackLayout>
             <ScrollView Grid.Row="3" Padding="20" Grid.ColumnSpan="2">
                 <StackLayout Padding="10" >
-                    <Button Text="Refresh list" BackgroundColor="Cyan" TextColor="Black"/>
-                    <Label TextColor="#000" Text="Items 1" FontSize="Title" HorizontalOptions="CenterAndExpand"/>
+                    <Label TextColor="#000" Text="{Binding MangaTitle}" FontSize="Title" HorizontalOptions="CenterAndExpand"/>
                     <ImageButton Source="" WidthRequest="50"/>
                     
                     <Label TextColor="#000" Text="Date de debut : 15-24-1990" FontSize="16"/>
@@ -57,6 +56,8 @@
                     </StackLayout>
 
                     <Label TextColor="#000" Text="Synopsis: Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations " HorizontalTextAlignment="Start"/>
+                    <Button Text="Refresh Manga Details" BackgroundColor="Cyan" TextColor="Black" Command="{Binding GetMangaDetails}"/>
+
                 </StackLayout>
             </ScrollView>
         </Grid>

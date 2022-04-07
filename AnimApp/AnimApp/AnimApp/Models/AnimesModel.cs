@@ -8,37 +8,19 @@ namespace AnimApp.Models
     class AnimesModel
     {
         // Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse);
-
-        [JsonProperty("data")]
-        public List<Datum> data { get; set; }
-        public Meta meta { get; set; }
-        public Links links { get; set; }
-
-        public class Datum
+        public class Links
         {
-            [JsonProperty("id")]
-            public string id { get; set; }
-
-            [JsonProperty("type")]
-            public string type { get; set; }
-
-            [JsonProperty("links")]
-            public Links links { get; set; }
-
-            [JsonProperty("attributes")]
-            public Attributes attributes { get; set; }
-            public Relationships relationships { get; set; }
+            public string self { get; set; }
+            public string related { get; set; }
+            public string first { get; set; }
+            public string next { get; set; }
+            public string last { get; set; }
         }
-
 
         public class Titles
         {
             public string en { get; set; }
-
-            [JsonProperty("en_jp")]
             public string en_jp { get; set; }
-
-            [JsonProperty("ja_jp")]
             public string ja_jp { get; set; }
             public string en_us { get; set; }
         }
@@ -98,7 +80,11 @@ namespace AnimApp.Models
             public Medium medium { get; set; }
         }
 
-
+        public class Meta
+        {
+            public Dimensions dimensions { get; set; }
+            public int count { get; set; }
+        }
 
         public class PosterImage
         {
@@ -106,8 +92,6 @@ namespace AnimApp.Models
             public string large { get; set; }
             public string small { get; set; }
             public string medium { get; set; }
-
-            [JsonProperty("original")]
             public string original { get; set; }
             public Meta meta { get; set; }
         }
@@ -117,8 +101,6 @@ namespace AnimApp.Models
             public string tiny { get; set; }
             public string large { get; set; }
             public string small { get; set; }
-
-            [JsonProperty("original")]
             public string original { get; set; }
             public Meta meta { get; set; }
         }
@@ -129,26 +111,16 @@ namespace AnimApp.Models
             public DateTime updatedAt { get; set; }
             public string slug { get; set; }
             public string synopsis { get; set; }
-
-            [JsonProperty("description")]
             public string description { get; set; }
             public int coverImageTopOffset { get; set; }
             public Titles titles { get; set; }
-
-            [JsonProperty("canonicalTitle")]
             public string canonicalTitle { get; set; }
             public List<string> abbreviatedTitles { get; set; }
-
-            [JsonProperty("averageRating")]
             public string averageRating { get; set; }
             public RatingFrequencies ratingFrequencies { get; set; }
             public int userCount { get; set; }
             public int favoritesCount { get; set; }
-
-            [JsonProperty("startDate")]
             public string startDate { get; set; }
-
-            [JsonProperty("endDate")]
             public string endDate { get; set; }
             public object nextRelease { get; set; }
             public int popularityRank { get; set; }
@@ -158,19 +130,11 @@ namespace AnimApp.Models
             public string subtype { get; set; }
             public string status { get; set; }
             public string tba { get; set; }
-
-            [JsonProperty("posterImage")] 
             public PosterImage posterImage { get; set; }
-
-            [JsonProperty("coverImage")]
             public CoverImage coverImage { get; set; }
-
-            [JsonProperty("episodeCount")]
             public int episodeCount { get; set; }
             public int? episodeLength { get; set; }
             public int totalLength { get; set; }
-
-            [JsonProperty("youtubeVideoId")]
             public string youtubeVideoId { get; set; }
             public string showType { get; set; }
             public bool nsfw { get; set; }
@@ -276,20 +240,22 @@ namespace AnimApp.Models
             public AnimeStaff animeStaff { get; set; }
         }
 
-        public class Meta
+        public class Datum
         {
-            public Dimensions dimensions { get; set; }
-            public int count { get; set; }
+            public string id { get; set; }
+            public string type { get; set; }
+            public Links links { get; set; }
+            public Attributes attributes { get; set; }
+            public Relationships relationships { get; set; }
+        }
+
+        public class Root
+        {
+            public List<Datum> data { get; set; }
+            public Meta meta { get; set; }
+            public Links links { get; set; }
         }
 
 
-        public class Links
-        {
-            public string self { get; set; }
-            public string related { get; set; }
-            public string first { get; set; }
-            public string next { get; set; }
-            public string last { get; set; }
-        }
     }
 }

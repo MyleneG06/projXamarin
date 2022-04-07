@@ -7,6 +7,10 @@
 
         <!-- test list-->
         <StackLayout Orientation="Vertical">
+            <Label Padding="0,0,30,0" FontSize="22" TextColor="#000" Text="{Binding AnimesList}" />
+            <Button Text="Refresh Animes List" BackgroundColor="Cyan" TextColor="Black" Command="{Binding GetAnimesList}"/>
+
+
 
             <!-- item 1-->
             <StackLayout Padding="20">

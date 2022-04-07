@@ -51,7 +51,7 @@ namespace AnimApp.ViewModels
             var client = HttpService.GetInstance();
             var result = await client.GetAsync($"https://kitsu.io/api/edge/manga?");
             var stringifiedAnswer = await result.Content.ReadAsStringAsync();
-            var mangaDetailResponse = JsonConvert.DeserializeObject<MangasModel>(stringifiedAnswer);
+            var mangaDetailResponse = JsonConvert.DeserializeObject<MangasModel.Root>(stringifiedAnswer);
 
             MangasList = mangaDetailResponse.data.ToString();
             //MangaTitle = mangaDetail.attributes.canonicalTitle ?? "Titre du Manga";

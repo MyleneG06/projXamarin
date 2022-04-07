@@ -16,13 +16,23 @@ namespace AnimApp.ViewModels
         {
             Title = "AniMangApp : détail du manga sélectionné";
             //OpenWebCommand = new Command(async () => await Browser.OpenAsync("https://aka.ms/xamarin-quickstart"));
+            
+            //new Command(() => Task.Run(LoadMangaDetails));
+            
         }
 
         //public ICommand OpenWebCommand { get; }
 
         // index du manga / animé
-        public int index = 0;
+        public int index = 1;
         //var result = await client.GetAsync($"https://kitsu.io/api/edge/manga/{index}");
+
+        string mangaTest;
+        public string MangaTest
+        {
+            get { return mangaTest; }
+            set { SetProperty(ref mangaTest, value); }
+        }
 
         string mangaTitle;
         public string MangaTitle
@@ -83,26 +93,26 @@ namespace AnimApp.ViewModels
         }
 
 
-        public ICommand GetMangasList => new Command(() => Task.Run(LoadMangasList));
-        async Task LoadMangasList()
+        public ICommand GetMangaDetails => new Command(() => Task.Run(LoadMangaDetails));
+        async Task LoadMangaDetails()
         {
             var client = HttpService.GetInstance();
-            var result = await client.GetAsync($"https://kitsu.io/api/edge/manga?");
+            var result = await client.GetAsync($"https://kitsu.io/api/edge/manga"); // /index root has not enough data
             var stringifiedAnswer = await result.Content.ReadAsStringAsync();
-            var mangaDetailResponse = JsonConvert.DeserializeObject<MangasModel>(stringifiedAnswer);
+            var mangaDetailResponse = JsonConvert.DeserializeObject<MangasModel.Root>(stringifiedAnswer);
             var mangaDetail = mangaDetailResponse.data[index];
 
-            MangaTitle = mangaDetail.attributes.canonicalTitle ?? "Titre du Manga";
+            MangaTitle = mangaDetail.attributes.canonicalTitle ?? "Manga title";
             MangaId = Convert.ToInt32(mangaDetail.id);
-            MangaCover = mangaDetail.attributes.coverImage?.original ?? "mangaCover.jpg";
-            MangaImage = mangaDetail.attributes.posterImage.original;
+            MangaCover = mangaDetail.attributes?.coverImage?.original ?? "mangaCover.jpg";
+            MangaImage = mangaDetail.attributes?.posterImage?.original ?? "mangaImage.jpg";
             //MangaViews = 
             //MangaLikes = 
-            MangaDate = mangaDetail.attributes.startDate;
+            MangaDate = mangaDetail.attributes?.startDate ?? "unknown date";
             //MangaEndDate = mangaDetail.attributes.endDate;
-            MangaRating = Convert.ToDouble(mangaDetail.attributes.averageRating);
-            MangaDescription = mangaDetail.attributes.description.ToString();
-            MangaTitleTranslation = mangaDetail.attributes.titles.ja_jp ?? "Pas de traduction disponible";
+            MangaRating = Convert.ToDouble(mangaDetail.attributes?.averageRating);
+            MangaDescription = mangaDetail.attributes?.description.ToString() ?? "unknown description";
+            MangaTitleTranslation = mangaDetail.attributes?.titles?.ja_jp ?? "no traduction available";
         }
 
         //    //if (mangaDetailsResponse?.Weather != null && mangaDetailsResponse.Weather.Any())
