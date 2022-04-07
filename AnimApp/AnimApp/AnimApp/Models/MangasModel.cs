@@ -19,8 +19,9 @@ namespace AnimApp.Models
 
         public class Titles
         {
-            [JsonProperty("en")]
             public string en { get; set; }
+
+            [JsonProperty("en_jp")]
             public string en_jp { get; set; }
             public string en_us { get; set; }
             [JsonProperty("ja_jp")]
@@ -95,10 +96,10 @@ namespace AnimApp.Models
         {
             public string tiny { get; set; }
             public string large { get; set; }
-
-            [JsonProperty("small")]
             public string small { get; set; }
             public string medium { get; set; }
+
+            [JsonProperty("original")]
             public string original { get; set; }
             public Meta meta { get; set; }
         }
@@ -124,12 +125,13 @@ namespace AnimApp.Models
         public class CoverImage
         {
             public string tiny { get; set; }
-            [JsonProperty("large")]
             public string large { get; set; }
             public string small { get; set; }
             public string tiny_webp { get; set; }
             public string large_webp { get; set; }
             public string small_webp { get; set; }
+
+            [JsonProperty("original")]
             public string original { get; set; }
             public Meta meta { get; set; }
         }
@@ -145,6 +147,8 @@ namespace AnimApp.Models
             public string description { get; set; }
             public int coverImageTopOffset { get; set; }
             public Titles titles { get; set; }
+
+            [JsonProperty("canonicalTitle")]
             public string canonicalTitle { get; set; }
             public List<string> abbreviatedTitles { get; set; }
 
@@ -156,6 +160,8 @@ namespace AnimApp.Models
 
             [JsonProperty("startDate")]
             public string startDate { get; set; }
+
+            [JsonProperty("endDate")]
             public string endDate { get; set; }
             public object nextRelease { get; set; }
             public int popularityRank { get; set; }

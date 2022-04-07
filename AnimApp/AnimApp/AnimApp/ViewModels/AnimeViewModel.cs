@@ -8,7 +8,7 @@ namespace AnimApp.ViewModels
     {
         public AnimeViewModel()
         {
-            Title = "ANI'MANG'APP : Détail de l'Animé sélectionné";
+            Title = "AniMangApp : détail de l'animé sélectionné";
             //OpenWebCommand = new Command(async () => await Browser.OpenAsync("https://aka.ms/xamarin-quickstart"));
         }
 

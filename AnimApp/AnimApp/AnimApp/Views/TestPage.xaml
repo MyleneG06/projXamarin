@@ -44,36 +44,10 @@
     </Grid>-->
     
     
-    <!-- test list-->
-    <StackLayout Orientation="Vertical">
-
-        <!-- item 1-->
-        <StackLayout Padding="20">
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                <Label Padding="0,0,30,0" FontSize="22" TextColor="#000" Text="Items 1" />
-                <Label  FontSize="22" TextColor="#000"  Text="20-11-1990" />
-            </StackLayout>
-        </StackLayout>
-        <!-- item 2-->
-        <StackLayout Padding="20">
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                <Label Padding="0,0,30,0" FontSize="22" TextColor="#000" Text="Items 2" />
-                <Label FontSize="22" TextColor="#000"  Text="15-01-1996" />
-            </StackLayout>
-        </StackLayout>
-        
-        <!-- item 3-->
-        <StackLayout Padding="20">
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                <Label Padding="0,0,30,0" FontSize="22" TextColor="#000" Text="Items 3" />
-                <Label FontSize="22" TextColor="#000"  Text="15-01-1996" />
-            </StackLayout>
-        </StackLayout>
-
-    </StackLayout>
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
+            <Label Text="page de test "
+                   TextColor="Black"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
         </StackLayout>

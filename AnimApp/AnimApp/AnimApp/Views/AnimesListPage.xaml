@@ -4,25 +4,55 @@
              x:Class="AnimApp.Views.AnimesListPage"
              Title="{Binding Title}">
     <ContentPage.Content>
-        <ListView 
+
+        <!-- test list-->
+        <StackLayout Orientation="Vertical">
+
+            <!-- item 1-->
+            <StackLayout Padding="20">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <Label Padding="0,0,30,0" FontSize="22" TextColor="#000" Text="Items 1" />
+                    <Label  FontSize="22" TextColor="#000"  Text="20-11-1990" />
+                </StackLayout>
+            </StackLayout>
+            <!-- item 2-->
+            <StackLayout Padding="20">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <Label Padding="0,0,30,0" FontSize="22" TextColor="#000" Text="Items 2" />
+                    <Label FontSize="22" TextColor="#000"  Text="15-01-1996" />
+                </StackLayout>
+            </StackLayout>
+
+            <!-- item 3-->
+            <StackLayout Padding="20">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <Label Padding="0,0,30,0" FontSize="22" TextColor="#000" Text="Items 3" />
+                    <Label FontSize="22" TextColor="#000"  Text="15-01-1996" />
+                </StackLayout>
+            </StackLayout>
+
+            <ListView 
         HorizontalOptions="FillAndExpand"
         VerticalOptions="FillAndExpand"
         ItemsSource="{Binding Anime}"
         SelectedItem="{Binding AnimeSelected, Mode=TwoWay}"
         HasUnevenRows="True">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <!-- Item 1-->
-                        <StackLayout Padding="20">
-                            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                                <Label Padding="0,0,30,0" FontSize="22" TextColor="#000" Text="Items 1" />
-                                <Label  FontSize="22" TextColor="#000"  Text="(20-11-1990)" />
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <!-- Item 1-->
+                            <StackLayout Padding="20">
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                                    <Label Padding="0,0,30,0" FontSize="22" TextColor="#000" Text="Items 1" />
+                                    <Label  FontSize="22" TextColor="#000"  Text="(20-11-1990)" />
+                                </StackLayout>
                             </StackLayout>
-                        </StackLayout>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </StackLayout>
+
     </ContentPage.Content>
 </ContentPage>
