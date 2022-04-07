@@ -99,6 +99,8 @@
     <Content Include="Resources\drawable\manga.png" />
     <AndroidResource Include="Resources\drawable\mangaCover.jpg" />
     <AndroidResource Include="Resources\drawable\mangas.png" />
+    <AndroidResource Include="Resources\drawable\translate.png" />
+    <AndroidResource Include="Resources\drawable\translateRed.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>

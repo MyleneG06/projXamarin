@@ -11806,7 +11806,13 @@ namespace AnimApp.Droid
 			public const int tooltip_frame_light = 2131165333;
 			
 			// aapt resource value: 0x7F070096
-			public const int xamarin_logo = 2131165334;
+			public const int translate = 2131165334;
+			
+			// aapt resource value: 0x7F070097
+			public const int translateRed = 2131165335;
+			
+			// aapt resource value: 0x7F070098
+			public const int xamarin_logo = 2131165336;
 			
 			static Drawable()
 			{

@@ -143,18 +143,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="anime.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="manga.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="animes.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="mangas.png" />
-  </ItemGroup>
-  <ItemGroup>
     <BundleResource Include="Resources\anime.png" />
   </ItemGroup>
   <ItemGroup>
@@ -165,5 +153,11 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\mangas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\translate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\translateRed.png" />
   </ItemGroup>
 </Project>

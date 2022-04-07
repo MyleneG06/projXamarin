@@ -41,7 +41,10 @@
             </StackLayout>
             <ScrollView Grid.Row="3" Padding="20" Grid.ColumnSpan="2">
                 <StackLayout Padding="10" >
+                    <Button Text="Refresh list" BackgroundColor="Cyan" TextColor="Black"/>
                     <Label TextColor="#000" Text="Items 1" FontSize="Title" HorizontalOptions="CenterAndExpand"/>
+                    <ImageButton Source="" WidthRequest="50"/>
+                    
                     <Label TextColor="#000" Text="Date de debut : 15-24-1990" FontSize="16"/>
                     <Label TextColor="#000" Text="Date de fin : 11-06-1995" FontSize="16"/>
                     <StackLayout Orientation="Horizontal">
