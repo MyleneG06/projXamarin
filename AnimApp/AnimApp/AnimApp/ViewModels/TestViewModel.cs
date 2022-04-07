@@ -8,7 +8,7 @@ namespace AnimApp.ViewModels
     {
         public TestViewModel()
         {
-            Title = "AniMangApp";
+            Title = "ANI'MANG'APP : Test";
             //OpenWebCommand = new Command(async () => await Browser.OpenAsync("https://aka.ms/xamarin-quickstart"));
         }
 

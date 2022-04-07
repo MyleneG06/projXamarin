@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AnimApp.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,7 @@ namespace AnimApp.Views
         public MangasListPage()
         {
             InitializeComponent();
+            BindingContext = new MangasListViewModel();
         }
     }
 }
