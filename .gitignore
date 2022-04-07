@@ -1,0 +1,9 @@
+/.vs
+.vs/
+/AnimApp/.vs
+/AnimApp/AnimApp/AnimApp.UWP/bin
+/AnimApp/AnimApp/AnimApp.UWP/obj
+/AnimApp/AnimApp/AnimApp.iOS/bin
+/AnimApp/AnimApp/AnimApp.iOS/obj
+/AnimApp/AnimApp/AnimApp.Android/bin
+/AnimApp/AnimApp/AnimApp.Android/obj
