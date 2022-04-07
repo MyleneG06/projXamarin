@@ -3,11 +3,25 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AnimApp.Views.AnimesListPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="liste des animés"
-                   TextColor="Black"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <ListView 
+        HorizontalOptions="FillAndExpand"
+        VerticalOptions="FillAndExpand"
+        ItemsSource="{Binding Anime}"
+        SelectedItem="{Binding AnimeSelected, Mode=TwoWay}"
+        HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <!-- Item 1-->
+                        <StackLayout Padding="20">
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                                <Label Padding="0,0,30,0" FontSize="22" TextColor="#000" Text="Items 1" />
+                                <Label  FontSize="22" TextColor="#000"  Text="(20-11-1990)" />
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </ContentPage.Content>
 </ContentPage>

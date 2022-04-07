@@ -1,1 +1,0 @@
-C:\Users\Yass\Desktop\projXamarin\AnimApp\AnimApp\AnimApp.UWP\AnimApp.UWP.csproj;x86
