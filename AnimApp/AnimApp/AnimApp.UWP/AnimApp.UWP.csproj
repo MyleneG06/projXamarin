@@ -105,8 +105,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="anime.png" />
+    <Content Include="animeCover.jpg" />
     <Content Include="animes.png" />
     <Content Include="manga.png" />
+    <Content Include="mangaCover.jpg" />
     <Content Include="mangas.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LargeTile.scale-100.png" />

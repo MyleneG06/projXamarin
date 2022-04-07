@@ -154,4 +154,16 @@
   <ItemGroup>
     <BundleResource Include="mangas.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\anime.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\animes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\manga.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\mangas.png" />
+  </ItemGroup>
 </Project>

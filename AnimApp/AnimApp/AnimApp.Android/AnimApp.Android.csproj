@@ -93,12 +93,12 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="anime.png" />
-    <Content Include="animes.png" />
-    <Content Include="manga.png" />
-    <Content Include="mangas.png" />
     <Content Include="Resources\drawable\anime.png" />
+    <AndroidResource Include="Resources\drawable\animeCover.jpg" />
+    <AndroidResource Include="Resources\drawable\animes.png" />
     <Content Include="Resources\drawable\manga.png" />
+    <AndroidResource Include="Resources\drawable\mangaCover.jpg" />
+    <AndroidResource Include="Resources\drawable\mangas.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>
