@@ -17,9 +17,10 @@
                     <DataTemplate>
                         <ViewCell>
                             <StackLayout Padding="20">
-                                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                                    <Label Padding="0,0,30,0" FontSize="22" TextColor="#000" Text="{Binding attributes.canonicalTitle}" />
-                                    <Label FontSize="22" TextColor="#000"  Text="{Binding attributes.startDate}" />
+                                <StackLayout Orientation="Vertical" HorizontalOptions="Center">
+                                    <Label Padding="0,0,30,0" FontSize="22" TextColor="#000" Text="{Binding id}" HorizontalOptions="Center"/>
+                                    <Label Padding="0,0,30,0" FontSize="22" TextColor="#000" Text="{Binding attributes.canonicalTitle}" HorizontalOptions="Center"/>
+                                    <Label FontSize="22" TextColor="#000"  Text="{Binding attributes.startDate}" HorizontalOptions="Center"/>
                                 </StackLayout>
                             </StackLayout>
                         </ViewCell>
@@ -29,7 +30,7 @@
 
             <Label Padding="0,0,30,0" FontSize="22" TextColor="#000" Text="{Binding AnimeTest}" />
 
-            <Button Text="Refresh Animes List" BackgroundColor="Cyan" TextColor="Black" Command="{Binding GetAnimesList}"/>
+            <!--<Button Text="Refresh Animes List" BackgroundColor="Cyan" TextColor="Black" Command="{Binding GetAnimesList}"/>-->
 
 
         </StackLayout>

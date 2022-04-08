@@ -1,25 +1,79 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AnimApp.Views.AnimePage">
+             x:Class="AnimApp.Views.AnimePage"
+             Title="{Binding Title}">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="{Binding Title}"
-                   TextColor="Black"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-            <!--<StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                <Label Padding="0,0,30,0" FontSize="22" TextColor="#000" Text="Id : " />
-                <Label FontSize="22" TextColor="#000"  Text="{Binding AnimeId}" />
+        <StackLayout >
+
+            <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height=".1*" />
+                <RowDefinition Height=".1*" />
+                <RowDefinition Height=".1*" />
+                <RowDefinition Height="0.6*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Image Source="{Binding AnimeCover}" Grid.ColumnSpan="2" Aspect="AspectFill" Grid.RowSpan="2"/>
+            <Frame
+                Grid.Row="1"
+                Grid.RowSpan="2"
+                Grid.ColumnSpan="2"
+                HeightRequest="100"
+                WidthRequest="100"
+                CornerRadius="50"
+                Padding="0"
+                IsClippedToBounds="True"
+                HorizontalOptions="Center"
+                VerticalOptions="Center">
+                <Image Source="{Binding AnimeImage}" HeightRequest="50" WidthRequest="50" Aspect="AspectFill" Margin="0"/>
+            </Frame>
+            
+            <StackLayout Grid.Row="2" Padding="20" HorizontalOptions="Center">
+                <Label Text="Vues" TextColor="#000" FontSize="18" HorizontalOptions="Center"/>
+                <Label Text="150" TextColor="#000" FontSize="18" HorizontalOptions="Center" x:Name="views"/>
             </StackLayout>
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                <Label Padding="0,0,30,0" FontSize="22" TextColor="#000" Text="Title : " />
-                <Label FontSize="22" TextColor="#000"  Text="{Binding AnimeTitle}" />
+            <StackLayout Grid.Row="2" Grid.Column="1" HorizontalOptions="Center" Padding="20">
+                <Label Text="Likes" TextColor="#000" FontSize="18"  HorizontalOptions="Center" />
+                <Label Text="200" TextColor="#000" FontSize="18" HorizontalOptions="Center" x:Name="likes"/>
             </StackLayout>
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                <Label Padding="0,0,30,0" FontSize="22" TextColor="#000" Text="Description : " />
-                <Label FontSize="22" TextColor="#000"  Text="{Binding AnimeDescription}" />
-            </StackLayout>-->
+            
+            <ScrollView Grid.Row="3" Padding="20" Grid.ColumnSpan="2">
+                <StackLayout Padding="10" >
+                    <Label TextColor="#000" Text="{Binding AnimeTitle}" FontSize="Title" HorizontalOptions="CenterAndExpand"/>
+                        <StackLayout Orientation="Horizontal">
+                            <Label TextColor="#000" Text="Date : " FontSize="16"/>
+                            <Label TextColor="#000" Text="{Binding AnimeDate}" FontSize="16"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                        <Label TextColor="#000" Text="Rating :" VerticalOptions="Center"/>
+                        <Image Source="rate3.png" HeightRequest="30"/>
+                            <Label TextColor="#000" Text="{Binding AnimeRating}" VerticalOptions="Center"/>
+                        </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                            <Label TextColor="#000" Text="Trailer :" VerticalOptions="Center"/>
+                        <ImageButton Source="https://play-lh.googleusercontent.com/lMoItBgdPPVDJsNOVtP26EKHePkwBg-PkuY9NOrc-fumRtTFP4XhpUNk_22syN4Datc" WidthRequest="50"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Vertical">
+                        <Label TextColor="#000" Text="Synopsis : " HorizontalTextAlignment="Start"/>
+                        <Label TextColor="#000" Text="{Binding AnimeDescription}" HorizontalTextAlignment="Start"/>
+                    </StackLayout>
+
+                    </StackLayout>
+
+                </ScrollView>
+
+
+            </Grid>
+
+            <!--<Button Text="Refresh Animé Details" BackgroundColor="Cyan" TextColor="Black" Command="{Binding GetAnimeDetails}" />-->
+            <ImageButton Source="translate.png" WidthRequest="50"/>
+
         </StackLayout>
+
     </ContentPage.Content>
 </ContentPage>
