@@ -6,10 +6,6 @@
     <ContentPage.Content>
 
         <StackLayout Orientation="Vertical">
-            <Label Text="liste des mangas"
-                   TextColor="Black"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
 
             <ListView 
         HorizontalOptions="FillAndExpand"

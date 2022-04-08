@@ -115,10 +115,10 @@
                         </StackLayout>
                         <StackLayout Orientation="Horizontal">
                             
-                            <!--(à remplacer par autre info)-->
+                            <!--(à remplacer par autre info)--><!--
                             <Label TextColor="#000" Text="Trailer : " VerticalOptions="Center"/>
                             <ImageButton Source="https://play-lh.googleusercontent.com/lMoItBgdPPVDJsNOVtP26EKHePkwBg-PkuY9NOrc-fumRtTFP4XhpUNk_22syN4Datc" WidthRequest="50"/>
-                            <!--(à remplacer par autre info)-->
+                            --><!--(à remplacer par autre info)-->
                             
                         </StackLayout>
 
