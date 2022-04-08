@@ -38,7 +38,7 @@ namespace AnimApp.ViewModels
                 {
                     Device.BeginInvokeOnMainThread(async () =>
                     {
-                        await Application.Current.MainPage.Navigation.PushAsync(new AnimePage(AnimeSelected)); //await Application.Current.MainPage.Navigation.PushAsync(new MainPage(animeSelected));
+                        await Application.Current.MainPage.Navigation.PushAsync(new AnimePage(AnimeSelected)); 
                         animeSelected = null;
                     });
                 }

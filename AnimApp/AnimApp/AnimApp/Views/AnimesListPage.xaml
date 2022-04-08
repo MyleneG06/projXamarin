@@ -28,10 +28,7 @@
                 </ListView.ItemTemplate>
             </ListView>
 
-            <Label Padding="0,0,30,0" FontSize="22" TextColor="#000" Text="{Binding AnimeTest}" />
-
             <!--<Button Text="Refresh Animes List" BackgroundColor="Cyan" TextColor="Black" Command="{Binding GetAnimesList}"/>-->
-
 
         </StackLayout>
 

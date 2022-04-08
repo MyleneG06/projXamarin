@@ -1,5 +1,6 @@
 ﻿using AnimApp.Models;
 using AnimApp.Services;
+using AnimApp.Views;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -7,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
+using static AnimApp.Models.MangasModel;
 
 namespace AnimApp.ViewModels
 {
@@ -15,49 +17,42 @@ namespace AnimApp.ViewModels
         public MangasListViewModel()
         {
             Title = "AniMangApp : liste des mangas";
+            LoadMangasList();
         }
 
-        string mangasList;
-        public string MangasList
+        List<Datum> mangasList;
+        public List<Datum> MangasList
         {
             get { return mangasList; }
             set { SetProperty(ref mangasList, value); }
         }
 
-        string mangaTitle;
-        public string MangaTitle
+        Datum mangaSelected;
+        public Datum MangaSelected
         {
-            get { return mangaTitle; }
-            set { SetProperty(ref mangaTitle, value); }
-        }
-
-        int mangaId;
-        public int MangaId
-        {
-            get { return mangaId; }
-            set { SetProperty(ref mangaId, value); }
-        }
-
-        string mangaDate;
-        public string MangaDate
-        {
-            get { return mangaDate; }
-            set { SetProperty(ref mangaDate, value); }
+            get { return mangaSelected; }
+            set
+            {
+                SetProperty(ref mangaSelected, value);
+                if (value != null)
+                {
+                    Device.BeginInvokeOnMainThread(async () =>
+                    {
+                        await Application.Current.MainPage.Navigation.PushAsync(new MangaPage(MangaSelected)); 
+                        mangaSelected = null;
+                    });
+                }
+            }
         }
 
         public ICommand GetMangasList => new Command(() => Task.Run(LoadMangasList));
         async Task LoadMangasList()
         {
             var client = HttpService.GetInstance();
-            var result = await client.GetAsync($"https://kitsu.io/api/edge/manga?");
+            var result = await client.GetAsync($"https://kitsu.io/api/edge/manga");
             var stringifiedAnswer = await result.Content.ReadAsStringAsync();
             var mangaDetailResponse = JsonConvert.DeserializeObject<MangasModel.Root>(stringifiedAnswer);
-
-            MangasList = mangaDetailResponse.data.ToString();
-            //MangaTitle = mangaDetail.attributes.canonicalTitle ?? "Titre du Manga";
-            //MangaId = Convert.ToInt32(mangaDetail.id);
-            //MangaDate = mangaDetail.attributes.startDate;
-
+            MangasList = mangaDetailResponse.data;
         }
     }
 }

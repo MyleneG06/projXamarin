@@ -4,11 +4,37 @@
              x:Class="AnimApp.Views.MangasListPage"
              Title="{Binding Title}">
     <ContentPage.Content>
-        <StackLayout>
+
+        <StackLayout Orientation="Vertical">
             <Label Text="liste des mangas"
                    TextColor="Black"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
+
+            <ListView 
+        HorizontalOptions="FillAndExpand"
+        VerticalOptions="FillAndExpand"
+        ItemsSource="{Binding MangasList}"
+        SelectedItem="{Binding MangaSelected, Mode=TwoWay}"
+        HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="20">
+                                <StackLayout Orientation="Vertical" HorizontalOptions="Center">
+                                    <Label Padding="0,0,30,0" FontSize="22" TextColor="#000" Text="{Binding id}" HorizontalOptions="Center"/>
+                                    <Label Padding="0,0,30,0" FontSize="22" TextColor="#000" Text="{Binding attributes.canonicalTitle}" HorizontalOptions="Center"/>
+                                    <Label FontSize="22" TextColor="#000"  Text="{Binding attributes.startDate}" HorizontalOptions="Center"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <!--<Button Text="Refresh Animes List" BackgroundColor="Cyan" TextColor="Black" Command="{Binding GetAnimesList}"/>-->
+
         </StackLayout>
+
     </ContentPage.Content>
 </ContentPage>

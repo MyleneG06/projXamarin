@@ -15,9 +15,6 @@ namespace AnimApp.ViewModels
         public AnimeViewModel(Datum AnimeSelected)
         {
             Title = $"AniMangApp - ANIME : {AnimeSelected.attributes.canonicalTitle} ";
-            //AnimeId = Convert.ToInt32(AnimeSelected.id);
-            //AnimeTitle = AnimeSelected.attributes.canonicalTitle;
-            //AnimeDescription = AnimeSelected.attributes.description;
             LoadAnimeDetails(AnimeSelected);
         }
 
@@ -59,19 +56,12 @@ namespace AnimApp.ViewModels
             get { return animeDate; }
             set { SetProperty(ref animeDate, value); }
         }
-        //string animeEndDate;
-        //public string AnimeEndDate
-        //{
-        //    get { return animeEndDate; }
-        //    set { SetProperty(ref animeEndDate, value); }
-        //}
         double animeRating;
         public double AnimeRating
         {
             get { return animeRating; }
             set { SetProperty(ref animeRating, value); }
         }
-
         string animeTitleTranslation;
         public string AnimeTitleTranslation
         {
@@ -79,43 +69,19 @@ namespace AnimApp.ViewModels
             set { SetProperty(ref animeTitleTranslation, value); }
         }
 
-
-        //public ICommand GetAnimeDetails => new Command(() => Task.Run(LoadAnimeDetails));
-        //async Task LoadAnimeDetails(Datum AnimeSelected)
         public void LoadAnimeDetails(Datum AnimeSelected)
         {
-            AnimeTitle = AnimeSelected.attributes.canonicalTitle ?? "Manga title";
+            AnimeTitle = AnimeSelected.attributes.canonicalTitle ?? "Anime title";
             AnimeId = Convert.ToInt32(AnimeSelected.id);
             AnimeCover = AnimeSelected.attributes?.coverImage?.original ?? "animeCover.jpg";
-            AnimeImage = AnimeSelected.attributes?.posterImage?.original ?? "anime.jpg";
+            AnimeImage = AnimeSelected.attributes?.posterImage?.original ?? "anime.png";
             //MangaViews = 
             //MangaLikes = 
             AnimeDate = AnimeSelected.attributes?.startDate ?? "unknown date";
-            //MangaEndDate = mangaDetail.attributes.endDate;
             AnimeRating = Convert.ToDouble(AnimeSelected.attributes?.averageRating);
             AnimeDescription = AnimeSelected.attributes?.description.ToString() ?? "unknown description";
             AnimeTitleTranslation = AnimeSelected.attributes?.titles?.ja_jp ?? "no traduction available";
         }
-
-        //    //if (mangaDetailsResponse?.Weather != null && mangaDetailsResponse.Weather.Any())
-        //    //{
-        //    //    //ErrorMessage = "";
-        //    //    MangaDetail = weatherResponse.Name;
-        //    //    //WindSpeed = $"{weatherResponse.Wind.Speed} km/h";
-        //    //}
-        //    //else
-        //    //{
-        //    //    ErrorMessage = weatherResponse?.Message ?? "Unknown error";
-        //    //    //if (weatherResponse == null || weatherResponse.Message == null)
-        //    //    //{ ErrorMessage = “Unknown error”; }
-        //    //    //else { ErrorMessage = weatherResponse.Message; }
-
-        //        //    City = "unknown";
-        //        //    WindSpeed = "unknown";
-        //        //    Humidity = "unknown";
-        //        //    Visibility = "unknown";
-        //        //    Temperature = "unknown";
-        //        //}
     }
 
 

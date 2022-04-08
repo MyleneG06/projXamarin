@@ -7,31 +7,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
+using static AnimApp.Models.MangasModel;
 
 namespace AnimApp.ViewModels
 {
-    class MangaViewModel : BaseViewModel
+    public class MangaViewModel : BaseViewModel
     {
-        public MangaViewModel()
+        public MangaViewModel(Datum MangaSelected)
         {
-            Title = "AniMangApp : détail du manga sélectionné";
-            //OpenWebCommand = new Command(async () => await Browser.OpenAsync("https://aka.ms/xamarin-quickstart"));
-            
-            //new Command(() => Task.Run(LoadMangaDetails));
-            
-        }
-
-        //public ICommand OpenWebCommand { get; }
-
-        // index du manga / animé
-        public int index = 1;
-        //var result = await client.GetAsync($"https://kitsu.io/api/edge/manga/{index}");
-
-        string mangaTest;
-        public string MangaTest
-        {
-            get { return mangaTest; }
-            set { SetProperty(ref mangaTest, value); }
+            Title = $"AniMangApp - MANGA : {MangaSelected.attributes.canonicalTitle} ";
+            LoadMangaDetails(MangaSelected);
         }
 
         string mangaTitle;
@@ -72,19 +57,12 @@ namespace AnimApp.ViewModels
             get { return mangaDate; }
             set { SetProperty(ref mangaDate, value); }
         }
-        //string mangaEndDate;
-        //public string MangaEndDate
-        //{
-        //    get { return mangaEndDate; }
-        //    set { SetProperty(ref mangaEndDate, value); }
-        //}
         double mangaRating;
         public double MangaRating
         {
             get { return mangaRating; }
             set { SetProperty(ref mangaRating, value); }
         }
-
         string mangaTitleTranslation;
         public string MangaTitleTranslation
         {
@@ -92,48 +70,21 @@ namespace AnimApp.ViewModels
             set { SetProperty(ref mangaTitleTranslation, value); }
         }
 
+        public MangasModel.Datum MangaSelected { get; }
 
-        public ICommand GetMangaDetails => new Command(() => Task.Run(LoadMangaDetails));
-        async Task LoadMangaDetails()
+        public void LoadMangaDetails(Datum MangaSelected)
         {
-            var client = HttpService.GetInstance();
-            var result = await client.GetAsync($"https://kitsu.io/api/edge/manga"); // /index root has not enough data
-            var stringifiedAnswer = await result.Content.ReadAsStringAsync();
-            var mangaDetailResponse = JsonConvert.DeserializeObject<MangasModel.Root>(stringifiedAnswer);
-            var mangaDetail = mangaDetailResponse.data[index];
-
-            MangaTitle = mangaDetail.attributes.canonicalTitle ?? "Manga title";
-            MangaId = Convert.ToInt32(mangaDetail.id);
-            MangaCover = mangaDetail.attributes?.coverImage?.original ?? "mangaCover.jpg";
-            MangaImage = mangaDetail.attributes?.posterImage?.original ?? "mangaImage.jpg";
+            MangaTitle = MangaSelected.attributes.canonicalTitle ?? "Manga title";
+            MangaId = Convert.ToInt32(MangaSelected.id);
+            MangaCover = MangaSelected.attributes?.coverImage?.original ?? "mangaCover.jpg";
+            MangaImage = MangaSelected.attributes?.posterImage?.original ?? "manga.png";
             //MangaViews = 
             //MangaLikes = 
-            MangaDate = mangaDetail.attributes?.startDate ?? "unknown date";
-            //MangaEndDate = mangaDetail.attributes.endDate;
-            MangaRating = Convert.ToDouble(mangaDetail.attributes?.averageRating);
-            MangaDescription = mangaDetail.attributes?.description.ToString() ?? "unknown description";
-            MangaTitleTranslation = mangaDetail.attributes?.titles?.ja_jp ?? "no traduction available";
+            MangaDate = MangaSelected.attributes?.startDate ?? "unknown date";
+            MangaRating = Convert.ToDouble(MangaSelected.attributes?.averageRating);
+            MangaDescription = MangaSelected.attributes?.description.ToString() ?? "unknown description";
+            MangaTitleTranslation = MangaSelected.attributes?.titles?.ja_jp ?? "no traduction available";
         }
-
-        //    //if (mangaDetailsResponse?.Weather != null && mangaDetailsResponse.Weather.Any())
-        //    //{
-        //    //    //ErrorMessage = "";
-        //    //    MangaDetail = weatherResponse.Name;
-        //    //    //WindSpeed = $"{weatherResponse.Wind.Speed} km/h";
-        //    //}
-        //    //else
-        //    //{
-        //    //    ErrorMessage = weatherResponse?.Message ?? "Unknown error";
-        //    //    //if (weatherResponse == null || weatherResponse.Message == null)
-        //    //    //{ ErrorMessage = “Unknown error”; }
-        //    //    //else { ErrorMessage = weatherResponse.Message; }
-
-        //        //    City = "unknown";
-        //        //    WindSpeed = "unknown";
-        //        //    Humidity = "unknown";
-        //        //    Visibility = "unknown";
-        //        //    Temperature = "unknown";
-        //        //}
     }
 
 }
