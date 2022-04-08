@@ -31,38 +31,18 @@ namespace AnimApp.ViewModels
         public Datum AnimeSelected
         {
             get { return animeSelected; }
-            set { 
+            set
+            {
                 SetProperty(ref animeSelected, value);
-                //if (value != null)
-                //{
-                //    Device.BeginInvokeOnMainThread(async () =>
-                //    {
-                //        await Application.Current.MainPage.Navigation.PushAsync(new AnimePage()); //await Application.Current.MainPage.Navigation.PushAsync(new MainPage(animeSelected));
-                //        animeSelected = null; 
-                //    });
-                //}
+                if (value != null)
+                {
+                    Device.BeginInvokeOnMainThread(async () =>
+                    {
+                        await Application.Current.MainPage.Navigation.PushAsync(new AnimePage(AnimeSelected)); //await Application.Current.MainPage.Navigation.PushAsync(new MainPage(animeSelected));
+                        animeSelected = null;
+                    });
+                }
             }
-        }
-
-        string animeTitle;
-        public string AnimeTitle
-        {
-            get { return animeTitle; }
-            set { SetProperty(ref animeTitle, value); }
-        }
-
-        int animeId;
-        public int AnimeId
-        {
-            get { return animeId; }
-            set { SetProperty(ref animeId, value); }
-        }
-
-        string animeDate;
-        public string AnimeDate
-        {
-            get { return animeDate; }
-            set { SetProperty(ref animeDate, value); }
         }
 
         public ICommand GetAnimesList => new Command(() => Task.Run(LoadAnimesList));
@@ -71,11 +51,8 @@ namespace AnimApp.ViewModels
             var client = HttpService.GetInstance();
             var result = await client.GetAsync($"https://kitsu.io/api/edge/anime");
             var stringifiedAnswer = await result.Content.ReadAsStringAsync();
-            var mangaDetailResponse = JsonConvert.DeserializeObject <AnimesModel.Root>(stringifiedAnswer);
-            AnimesList = mangaDetailResponse.data;
-            //AnimeSelected = mangaDetailResponse.data[index];
-            //AnimeTitle = AnimeSelected.attributes.canonicalTitle;
-
+            var animeDetailResponse = JsonConvert.DeserializeObject<AnimesModel.Root>(stringifiedAnswer);
+            AnimesList = animeDetailResponse.data;
         }
     }
 

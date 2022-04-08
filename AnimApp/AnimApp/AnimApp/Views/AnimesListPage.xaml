@@ -18,15 +18,16 @@
                         <ViewCell>
                             <StackLayout Padding="20">
                                 <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                                    <Label Padding="0,0,30,0" FontSize="22" TextColor="#000" Text="{Binding id}" />
                                     <Label Padding="0,0,30,0" FontSize="22" TextColor="#000" Text="{Binding attributes.canonicalTitle}" />
-                                    <Label FontSize="22" TextColor="#000"  Text="{Binding attributes.createdAt}" />
+                                    <Label FontSize="22" TextColor="#000"  Text="{Binding attributes.startDate}" />
                                 </StackLayout>
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+
+            <Label Padding="0,0,30,0" FontSize="22" TextColor="#000" Text="{Binding AnimeTest}" />
 
             <Button Text="Refresh Animes List" BackgroundColor="Cyan" TextColor="Black" Command="{Binding GetAnimesList}"/>
 

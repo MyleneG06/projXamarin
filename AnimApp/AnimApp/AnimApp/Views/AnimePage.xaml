@@ -1,14 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AnimApp.Views.AnimePage"
-             Title="{Binding Title}">
+             x:Class="AnimApp.Views.AnimePage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="détail d'un animé"
+            <Label Text="{Binding Title}"
                    TextColor="Black"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
+            <!--<StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Label Padding="0,0,30,0" FontSize="22" TextColor="#000" Text="Id : " />
+                <Label FontSize="22" TextColor="#000"  Text="{Binding AnimeId}" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Label Padding="0,0,30,0" FontSize="22" TextColor="#000" Text="Title : " />
+                <Label FontSize="22" TextColor="#000"  Text="{Binding AnimeTitle}" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Label Padding="0,0,30,0" FontSize="22" TextColor="#000" Text="Description : " />
+                <Label FontSize="22" TextColor="#000"  Text="{Binding AnimeDescription}" />
+            </StackLayout>-->
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

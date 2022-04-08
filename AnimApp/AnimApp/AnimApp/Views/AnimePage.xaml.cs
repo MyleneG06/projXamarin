@@ -13,10 +13,10 @@ namespace AnimApp.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AnimePage : ContentPage
     {
-        public AnimePage()
+        public AnimePage(Models.AnimesModel.Datum animeSelected)
         {
             InitializeComponent();
-            BindingContext = new AnimeViewModel();
+            BindingContext = new AnimeViewModel(animeSelected);
         }
     }
 }

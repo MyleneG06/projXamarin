@@ -5,7 +5,7 @@ using System.Text;
 
 namespace AnimApp.Models
 {
-    class AnimesModel
+    public class AnimesModel
     {
         // Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse);
         public class Links
