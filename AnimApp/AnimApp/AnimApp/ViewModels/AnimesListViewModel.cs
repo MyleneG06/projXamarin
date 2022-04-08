@@ -1,5 +1,6 @@
 ﻿using AnimApp.Models;
 using AnimApp.Services;
+using AnimApp.Views;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -7,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
+using static AnimApp.Models.AnimesModel;
 
 namespace AnimApp.ViewModels
 {
@@ -15,21 +17,31 @@ namespace AnimApp.ViewModels
         public AnimesListViewModel()
         {
             Title = "AniMangApp : liste des animés";
-
-            //this.AnimesList = animesList;
+            LoadAnimesList();
         }
-        //public AnimesListViewModel(string test)
-        //{
-        //    //Title = "AniMangApp : liste des animés";
 
-        //    this.AnimesList = test;
-        //}
-
-        string animesList;
-        public string AnimesList
+        List<Datum> animesList;
+        public List<Datum> AnimesList
         {
             get { return animesList; }
             set { SetProperty(ref animesList, value); }
+        }
+
+        Datum animeSelected;
+        public Datum AnimeSelected
+        {
+            get { return animeSelected; }
+            set { 
+                SetProperty(ref animeSelected, value);
+                //if (value != null)
+                //{
+                //    Device.BeginInvokeOnMainThread(async () =>
+                //    {
+                //        await Application.Current.MainPage.Navigation.PushAsync(new AnimePage()); //await Application.Current.MainPage.Navigation.PushAsync(new MainPage(animeSelected));
+                //        animeSelected = null; 
+                //    });
+                //}
+            }
         }
 
         string animeTitle;
@@ -59,16 +71,10 @@ namespace AnimApp.ViewModels
             var client = HttpService.GetInstance();
             var result = await client.GetAsync($"https://kitsu.io/api/edge/anime");
             var stringifiedAnswer = await result.Content.ReadAsStringAsync();
-            var mangaDetailResponse = JsonConvert.DeserializeObject < AnimesModel.Root>(stringifiedAnswer);
-
-            AnimesList = stringifiedAnswer;
-            //MangaTitle = mangaDetail.attributes.canonicalTitle ?? "Titre du Manga";
-            //MangaId = Convert.ToInt32(mangaDetail.id);
-            //MangaDate = mangaDetail.attributes.startDate;
-            
-            
-            //new AnimesListViewModel(AnimesList);
-
+            var mangaDetailResponse = JsonConvert.DeserializeObject <AnimesModel.Root>(stringifiedAnswer);
+            AnimesList = mangaDetailResponse.data;
+            //AnimeSelected = mangaDetailResponse.data[index];
+            //AnimeTitle = AnimeSelected.attributes.canonicalTitle;
 
         }
     }
