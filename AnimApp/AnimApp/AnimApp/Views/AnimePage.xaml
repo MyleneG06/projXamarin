@@ -36,14 +36,17 @@
                 <Label Text="Vues" TextColor="#000" FontSize="18" HorizontalOptions="Center"/>
                 <Label Text="150" TextColor="#000" FontSize="18" HorizontalOptions="Center" x:Name="views"/>
             </StackLayout>
-            <StackLayout Grid.Row="2" Grid.Column="1" HorizontalOptions="Center" Padding="20">
-                <Label Text="Likes" TextColor="#000" FontSize="18"  HorizontalOptions="Center" />
-                <Label Text="200" TextColor="#000" FontSize="18" HorizontalOptions="Center" x:Name="likes"/>
+            <StackLayout Grid.Row="2" Grid.Column="1" Orientation="Horizontal" HorizontalOptions="End" Padding="0, 0, 20, 0">
+                <StackLayout HorizontalOptions="Center" Padding="20">
+                    <Label Text="Likes" TextColor="#000" FontSize="18"  HorizontalOptions="Center" />
+                    <Label Text="200" TextColor="#000" FontSize="18" HorizontalOptions="Center" x:Name="likes"/>
+                </StackLayout>
+                <ImageButton BackgroundColor="Transparent" Source="like_button.png" WidthRequest="50" HeightRequest="50" Clicked="Click_To_Like"/>
             </StackLayout>
-            
-            <ScrollView Grid.Row="3" Padding="20" Grid.ColumnSpan="2">
+
+                <ScrollView Grid.Row="3" Padding="20" Grid.ColumnSpan="2">
                 <StackLayout Padding="10" >
-                    <Label TextColor="#000" Text="{Binding AnimeTitle}" FontSize="Title" HorizontalOptions="CenterAndExpand"/>
+                    <Label TextColor="#000" Text="{Binding AnimeTitle}" FontSize="Title" HorizontalOptions="CenterAndExpand" x:Name="animeTitle"/>
                         <StackLayout Orientation="Horizontal">
                             <Label TextColor="#000" Text="Date : " FontSize="16"/>
                             <Label TextColor="#000" Text="{Binding AnimeDate}" FontSize="16"/>

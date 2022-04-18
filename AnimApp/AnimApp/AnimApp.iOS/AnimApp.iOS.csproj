@@ -193,4 +193,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\rating90.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\like_button.png" />
+  </ItemGroup>
 </Project>

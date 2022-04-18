@@ -107,6 +107,7 @@
     <Content Include="anime.png" />
     <Content Include="animeCover.jpg" />
     <Content Include="animes.png" />
+    <Content Include="like_button.png" />
     <Content Include="manga.png" />
     <Content Include="mangaCover.jpg" />
     <Content Include="mangas.png" />

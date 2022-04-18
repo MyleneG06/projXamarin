@@ -96,6 +96,7 @@
     <Content Include="Resources\drawable\anime.png" />
     <AndroidResource Include="Resources\drawable\animeCover.jpg" />
     <AndroidResource Include="Resources\drawable\animes.png" />
+    <AndroidResource Include="Resources\drawable\like_button.png" />
     <Content Include="Resources\drawable\manga.png" />
     <AndroidResource Include="Resources\drawable\mangaCover.jpg" />
     <AndroidResource Include="Resources\drawable\mangas.png" />
