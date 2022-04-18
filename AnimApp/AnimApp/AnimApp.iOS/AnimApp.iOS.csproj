@@ -160,4 +160,37 @@
   <ItemGroup>
     <BundleResource Include="Resources\translateRed.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\rating0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\rating10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\rating100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\rating20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\rating30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\rating40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\rating50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\rating60.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\rating70.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\rating80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\rating90.png" />
+  </ItemGroup>
 </Project>

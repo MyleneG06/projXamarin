@@ -63,6 +63,12 @@ namespace AnimApp.ViewModels
             get { return mangaRating; }
             set { SetProperty(ref mangaRating, value); }
         }
+        string mangaRatingImage;
+        public string MangaRatingImage
+        {
+            get { return mangaRatingImage; }
+            set { SetProperty(ref mangaRatingImage, value); }
+        }
         string mangaTitleTranslation;
         public string MangaTitleTranslation
         {
@@ -81,7 +87,52 @@ namespace AnimApp.ViewModels
             //MangaViews = 
             //MangaLikes = 
             MangaDate = MangaSelected.attributes?.startDate ?? "unknown date";
-            MangaRating = Convert.ToDouble(MangaSelected.attributes?.averageRating);
+            //MangaRating = Convert.ToDouble(MangaSelected.attributes?.averageRating);
+            MangaRating = (MangaSelected.attributes?.averageRating != null && MangaSelected.attributes?.averageRating != "") ? Convert.ToDouble(MangaSelected.attributes?.averageRating) : 0;
+            if (MangaRating == 0)
+            {
+                MangaRatingImage = "rating0.png";
+            }
+            else if (MangaRating > 0 && MangaRating <= 10)
+            {
+                MangaRatingImage = "rating10.png";
+            }
+            else if (MangaRating > 10 && MangaRating <= 20)
+            {
+                MangaRatingImage = "rating20.png";
+            }
+            else if (MangaRating > 20 && MangaRating <= 30)
+            {
+                MangaRatingImage = "rating30.png";
+            }
+            else if (MangaRating > 30 && MangaRating <= 40)
+            {
+                MangaRatingImage = "rating40.png";
+            }
+            else if (MangaRating > 40 && MangaRating <= 50)
+            {
+                MangaRatingImage = "rating50.png";
+            }
+            else if (MangaRating > 50 && MangaRating <= 60)
+            {
+                MangaRatingImage = "rating60.png";
+            }
+            else if (MangaRating > 60 && MangaRating <= 70)
+            {
+                MangaRatingImage = "rating70.png";
+            }
+            else if (MangaRating > 70 && MangaRating <= 80)
+            {
+                MangaRatingImage = "rating80.png";
+            }
+            else if (MangaRating > 80 && MangaRating <= 90)
+            {
+                MangaRatingImage = "rating90.png";
+            }
+            else
+            {
+                MangaRatingImage = "rating100.png";
+            }
             MangaDescription = MangaSelected.attributes?.description.ToString() ?? "unknown description";
             MangaTitleTranslation = MangaSelected.attributes?.titles?.ja_jp ?? "no traduction available";
         }

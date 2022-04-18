@@ -101,6 +101,17 @@
     <AndroidResource Include="Resources\drawable\mangas.png" />
     <AndroidResource Include="Resources\drawable\translate.png" />
     <AndroidResource Include="Resources\drawable\translateRed.png" />
+    <AndroidResource Include="Resources\drawable\rating0.png" />
+    <AndroidResource Include="Resources\drawable\rating10.png" />
+    <AndroidResource Include="Resources\drawable\rating100.png" />
+    <AndroidResource Include="Resources\drawable\rating20.png" />
+    <AndroidResource Include="Resources\drawable\rating30.png" />
+    <AndroidResource Include="Resources\drawable\rating40.png" />
+    <AndroidResource Include="Resources\drawable\rating50.png" />
+    <AndroidResource Include="Resources\drawable\rating60.png" />
+    <AndroidResource Include="Resources\drawable\rating70.png" />
+    <AndroidResource Include="Resources\drawable\rating80.png" />
+    <AndroidResource Include="Resources\drawable\rating90.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>

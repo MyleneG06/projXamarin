@@ -50,7 +50,7 @@
                         </StackLayout>
                         <StackLayout Orientation="Horizontal">
                         <Label TextColor="#000" Text="Rating :" VerticalOptions="Center"/>
-                        <Image Source="rate3.png" HeightRequest="30"/>
+                        <Image Source="{Binding AnimeRatingImage}" HeightRequest="30"/>
                             <Label TextColor="#000" Text="{Binding AnimeRating}" VerticalOptions="Center"/>
                         </StackLayout>
                     <StackLayout Orientation="Horizontal">
