@@ -58,7 +58,7 @@
                         </StackLayout>
                     <StackLayout Orientation="Horizontal">
                             <Label TextColor="#000" Text="Trailer :" VerticalOptions="Center"/>
-                        <ImageButton Source="https://play-lh.googleusercontent.com/lMoItBgdPPVDJsNOVtP26EKHePkwBg-PkuY9NOrc-fumRtTFP4XhpUNk_22syN4Datc" WidthRequest="50"/>
+                        <ImageButton Clicked="OpenVideo" Source="https://play-lh.googleusercontent.com/lMoItBgdPPVDJsNOVtP26EKHePkwBg-PkuY9NOrc-fumRtTFP4XhpUNk_22syN4Datc" WidthRequest="50"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Vertical">

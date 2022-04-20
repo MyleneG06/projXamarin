@@ -30,6 +30,7 @@ namespace AnimApp.UWP
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
+
         }
 
         /// <summary>
@@ -57,6 +58,7 @@ namespace AnimApp.UWP
 
                 rootFrame.NavigationFailed += OnNavigationFailed;
                 global::Xamarin.Forms.Forms.SetFlags("Shell_UWP_Experimental");
+                
                 Xamarin.Forms.Forms.Init(e);
 
                 if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)

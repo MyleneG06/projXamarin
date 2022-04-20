@@ -1,4 +1,5 @@
 ﻿using AnimApp.ViewModels;
+using Rg.Plugins.Popup.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -46,6 +47,11 @@ namespace AnimApp.Views
         protected override void OnDisappearing()
         {
             base.OnDisappearing();
+        }
+
+        private void OpenVideo(object sender, EventArgs e)
+        {
+            Navigation.PushPopupAsync(new PopPup());
         }
     }
 }
