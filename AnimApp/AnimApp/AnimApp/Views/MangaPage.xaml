@@ -107,8 +107,8 @@
 
                 <ScrollView Grid.Row="3" Padding="20" Grid.ColumnSpan="2">
                     <StackLayout Padding="10" >
-                        <Label TextColor="#000" Text="{Binding MangaTitle}" FontSize="Title" HorizontalOptions="CenterAndExpand" x:Name="mangaTitle"/>
                         <ImageButton BackgroundColor="Transparent" Source="japanese_translate.png" WidthRequest="50" Command="{Binding ToastTranslateCommand}"/>
+                        <Label TextColor="#000" Text="{Binding MangaTitle}" FontSize="Title" HorizontalOptions="CenterAndExpand" x:Name="mangaTitle"/>
 
                         <StackLayout Orientation="Horizontal">
                             <Label TextColor="#000" Text="Date : " FontSize="16"/>

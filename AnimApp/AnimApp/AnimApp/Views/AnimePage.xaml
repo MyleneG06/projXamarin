@@ -45,8 +45,8 @@
                 </StackLayout>
                 <ScrollView Grid.Row="3" Padding="20" Grid.ColumnSpan="2">
                     <StackLayout Padding="10" >
-                        <Label TextColor="#000" Text="{Binding AnimeTitle}" FontSize="Title" HorizontalOptions="CenterAndExpand" x:Name="animeTitle"/>
                         <ImageButton BackgroundColor="Transparent" Source="japanese_translate.png" WidthRequest="50" Command="{Binding ToastTranslateCommand}"/>
+                        <Label TextColor="#000" Text="{Binding AnimeTitle}" FontSize="Title" HorizontalOptions="CenterAndExpand" x:Name="animeTitle"/>
                         <StackLayout Orientation="Horizontal">
                             <Label TextColor="#000" Text="Date : " FontSize="16"/>
                             <Label TextColor="#000" Text="{Binding AnimeDate}" FontSize="16"/>
