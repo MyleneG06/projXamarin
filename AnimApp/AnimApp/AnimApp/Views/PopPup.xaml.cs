@@ -18,12 +18,12 @@ namespace AnimApp.Views
             InitializeComponent();
         }
 
-        void ClosePopPup(object sender, EventArgs e)
+        public void ClosePopPup(object sender, EventArgs e)
         {
             Navigation.PopPopupAsync();
         }
 
-        void PopupPage_BackgroundClicked(object sender, EventArgs e)
+        public void PopupPage_BackgroundClicked(object sender, EventArgs e)
         {
             Navigation.PopPopupAsync();
         }
