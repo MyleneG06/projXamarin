@@ -100,11 +100,10 @@
     <AndroidResource Include="Resources\drawable\animeCover.jpg" />
     <AndroidResource Include="Resources\drawable\animes.png" />
     <AndroidResource Include="Resources\drawable\like_button.png" />
+    <AndroidResource Include="Resources\drawable\japanese_translate.png" />
     <Content Include="Resources\drawable\manga.png" />
     <AndroidResource Include="Resources\drawable\mangaCover.jpg" />
     <AndroidResource Include="Resources\drawable\mangas.png" />
-    <AndroidResource Include="Resources\drawable\translate.png" />
-    <AndroidResource Include="Resources\drawable\translateRed.png" />
     <AndroidResource Include="Resources\drawable\rating0.png" />
     <AndroidResource Include="Resources\drawable\rating10.png" />
     <AndroidResource Include="Resources\drawable\rating100.png" />

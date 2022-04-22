@@ -158,12 +158,6 @@
     <BundleResource Include="Resources\mangas.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\translate.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\translateRed.png" />
-  </ItemGroup>
-  <ItemGroup>
     <BundleResource Include="Resources\rating0.png" />
   </ItemGroup>
   <ItemGroup>
@@ -198,5 +192,8 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\like_button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\japanese_translate.png" />
   </ItemGroup>
 </Project>

@@ -107,6 +107,7 @@
     <Content Include="anime.png" />
     <Content Include="animeCover.jpg" />
     <Content Include="animes.png" />
+    <Content Include="japanese_translate.png" />
     <Content Include="like_button.png" />
     <Content Include="manga.png" />
     <Content Include="mangaCover.jpg" />
@@ -151,8 +152,6 @@
     <Content Include="rating70.png" />
     <Content Include="rating80.png" />
     <Content Include="rating90.png" />
-    <Content Include="translate.png" />
-    <Content Include="translateRed.png" />
     <Content Include="xamarin_logo.png" />
     <Content Include="icon_about.png" />
     <Content Include="icon_feed.png" />
