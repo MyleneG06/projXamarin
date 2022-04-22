@@ -84,8 +84,6 @@ namespace AnimApp.ViewModels
             MangaId = Convert.ToInt32(MangaSelected.id);
             MangaCover = MangaSelected.attributes?.coverImage?.original ?? "mangaCover.jpg";
             MangaImage = MangaSelected.attributes?.posterImage?.original ?? "manga.png";
-            //MangaViews = 
-            //MangaLikes = 
             MangaDate = MangaSelected.attributes?.startDate ?? "unknown date";
             //MangaRating = Convert.ToDouble(MangaSelected.attributes?.averageRating);
             MangaRating = (MangaSelected.attributes?.averageRating != null && MangaSelected.attributes?.averageRating != "") ? Convert.ToDouble(MangaSelected.attributes?.averageRating) : 0;
@@ -135,6 +133,12 @@ namespace AnimApp.ViewModels
             }
             MangaDescription = MangaSelected.attributes?.description.ToString() ?? "unknown description";
             MangaTitleTranslation = MangaSelected.attributes?.titles?.ja_jp ?? "no traduction available";
+        }
+
+        public ICommand ToastTranslateCommand => new Command(ToastTranslate);
+        private void ToastTranslate(object obj)
+        {
+            DependencyService.Get<IToastTranslateService>()?.DisplayTranslate(MangaTitleTranslation);
         }
     }
 

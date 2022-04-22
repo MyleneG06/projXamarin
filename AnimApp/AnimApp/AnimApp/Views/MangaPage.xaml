@@ -96,11 +96,7 @@
                     <Label Text="Vues" TextColor="#000" FontSize="18" HorizontalOptions="Center"/>
                     <Label Text="150" TextColor="#000" FontSize="18" HorizontalOptions="Center" x:Name="views"/>
                 </StackLayout>
-                <!--
-                <StackLayout Grid.Row="2" Grid.Column="1" HorizontalOptions="Center" Padding="20">
-                    <Label Text="Likes" TextColor="#000" FontSize="18"  HorizontalOptions="Center" />
-                    <Label Text="200" TextColor="#000" FontSize="18" HorizontalOptions="Center" x:Name="likes"/>
-                </StackLayout>-->
+
                 <StackLayout Grid.Row="2" Grid.Column="1" Orientation="Horizontal" HorizontalOptions="End" Padding="0, 0, 20, 0">
                     <StackLayout HorizontalOptions="Center" Padding="20">
                         <Label Text="Likes" TextColor="#000" FontSize="18"  HorizontalOptions="Center" />
@@ -112,6 +108,8 @@
                 <ScrollView Grid.Row="3" Padding="20" Grid.ColumnSpan="2">
                     <StackLayout Padding="10" >
                         <Label TextColor="#000" Text="{Binding MangaTitle}" FontSize="Title" HorizontalOptions="CenterAndExpand" x:Name="mangaTitle"/>
+                        <ImageButton Source="japanese_translate.png" WidthRequest="50" Command="{Binding ToastTranslateCommand}"/>
+
                         <StackLayout Orientation="Horizontal">
                             <Label TextColor="#000" Text="Date : " FontSize="16"/>
                             <Label TextColor="#000" Text="{Binding MangaDate}" FontSize="16"/>

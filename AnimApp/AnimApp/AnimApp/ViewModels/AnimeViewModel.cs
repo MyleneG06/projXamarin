@@ -82,8 +82,6 @@ namespace AnimApp.ViewModels
             AnimeId = Convert.ToInt32(AnimeSelected.id);
             AnimeCover = AnimeSelected.attributes?.coverImage?.original ?? "animeCover.jpg";
             AnimeImage = AnimeSelected.attributes?.posterImage?.original ?? "anime.png";
-            //MangaViews = 
-            //MangaLikes = 
             AnimeDate = AnimeSelected.attributes?.startDate ?? "unknown date";
             //AnimeRating = Convert.ToDouble(AnimeSelected.attributes?.averageRating);
             AnimeRating = (AnimeSelected.attributes?.averageRating != null && AnimeSelected.attributes?.averageRating != "") ? Convert.ToDouble(AnimeSelected.attributes?.averageRating) : 0;
