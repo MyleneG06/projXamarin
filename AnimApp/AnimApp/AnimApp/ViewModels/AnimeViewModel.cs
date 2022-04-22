@@ -75,6 +75,7 @@ namespace AnimApp.ViewModels
             set { SetProperty(ref animeTitleTranslation, value); }
         }
 
+        
         public void LoadAnimeDetails(Datum AnimeSelected)
         {
             AnimeTitle = AnimeSelected.attributes.canonicalTitle ?? "Anime title";
@@ -132,6 +133,12 @@ namespace AnimApp.ViewModels
             }
             AnimeDescription = AnimeSelected.attributes?.description.ToString() ?? "unknown description";
             AnimeTitleTranslation = AnimeSelected.attributes?.titles?.ja_jp ?? "no traduction available";
+        }
+
+        public ICommand ToastTranslateCommand => new Command(ToastTranslate);
+        private void ToastTranslate(object obj)
+        {
+            DependencyService.Get<IToastTranslateService>()?.DisplayTranslate(AnimeTitleTranslation);
         }
     }
 
