@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using static AnimApp.Models.AnimesModel;
 
@@ -76,8 +77,14 @@ namespace AnimApp.ViewModels
             get { return animeTitleTranslation; }
             set { SetProperty(ref animeTitleTranslation, value); }
         }
+        string showNbLike;
+        public string ShowNbLike
+        {
+            get { return showNbLike; }
+            set { SetProperty(ref showNbLike, value); }
+        }
 
-        
+
         public void LoadAnimeDetails(Datum AnimeSelected)
         {
             AnimeTitle = AnimeSelected.attributes.canonicalTitle ?? "Anime title";
@@ -134,6 +141,10 @@ namespace AnimApp.ViewModels
             }
             AnimeDescription = AnimeSelected.attributes?.description.ToString() ?? "unknown description";
             AnimeTitleTranslation = AnimeSelected.attributes?.titles?.ja_jp ?? "no traduction available";
+
+            prefNameLikes += AnimeTitle;
+            nbLikes = Preferences.Get(prefNameLikes, 0);
+            ShowNbLike = nbLikes.ToString();
         }
 
         public ICommand ToastTranslateCommand => new Command(ToastTranslate);
@@ -151,8 +162,8 @@ namespace AnimApp.ViewModels
 
         public ICommand OpenPopup => new Command(OpenVideo);
 
-            private void OpenVideo()
-            {
+        private void OpenVideo()
+        {
             if(AnimeTrailerId != "")
             {
                 Application.Current.MainPage.Navigation.PushPopupAsync(new PopPup(AnimeTrailerId));
@@ -163,7 +174,20 @@ namespace AnimApp.ViewModels
 
             }
                 
-            }
+        }
+
+        public ICommand LikeCommand => new Command(ClickToLike);
+
+        int nbLikes = 0;
+        string prefNameLikes = "nbLikesAnime";
+
+
+        void ClickToLike()
+        {
+            nbLikes++;
+            ShowNbLike = nbLikes.ToString();
+            Preferences.Set(prefNameLikes, nbLikes);
+        }
     }
 
 

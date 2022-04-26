@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using static AnimApp.Models.MangasModel;
 
@@ -75,6 +76,12 @@ namespace AnimApp.ViewModels
             get { return mangaTitleTranslation; }
             set { SetProperty(ref mangaTitleTranslation, value); }
         }
+        string showNbLike;
+        public string ShowNbLike
+        {
+            get { return showNbLike; }
+            set { SetProperty(ref showNbLike, value); }
+        }
 
         public MangasModel.Datum MangaSelected { get; }
 
@@ -133,12 +140,29 @@ namespace AnimApp.ViewModels
             }
             MangaDescription = MangaSelected.attributes?.description.ToString() ?? "unknown description";
             MangaTitleTranslation = MangaSelected.attributes?.titles?.ja_jp ?? "no traduction available";
+            
+            prefNameLikes += MangaTitle;
+            nbLikes = Preferences.Get(prefNameLikes, 0);
+            ShowNbLike = nbLikes.ToString();
         }
 
         public ICommand ToastTranslateCommand => new Command(ToastTranslate);
         private void ToastTranslate(object obj)
         {
             DependencyService.Get<IToastTranslateService>()?.DisplayTranslate(MangaTitleTranslation);
+        }
+
+        public ICommand LikeCommand => new Command(ClickToLike);
+
+        int nbLikes = 0;
+        string prefNameLikes = "nbLikesManga";
+
+
+        void ClickToLike()
+        {
+            nbLikes++;
+            ShowNbLike = nbLikes.ToString();
+            Preferences.Set(prefNameLikes, nbLikes);
         }
     }
 

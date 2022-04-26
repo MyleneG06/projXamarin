@@ -18,23 +18,11 @@ namespace AnimApp.Views
             InitializeComponent();
             BindingContext = new MangaViewModel(mangaSelected);
             prefNameViews += mangaTitle.Text;
-            prefNameLikes += mangaTitle.Text;
             nbViews = Preferences.Get(prefNameViews, 0);
-            nbLikes = Preferences.Get(prefNameLikes, 0);
-            likes.Text = nbLikes.ToString();
         }
 
         int nbViews = 0;
-        int nbLikes = 0;
         string prefNameViews = "nbViewsManga";
-        string prefNameLikes = "nbLikesAnime";
-
-        void Click_To_Like(object sender, EventArgs e)
-        {
-            nbLikes++;
-            likes.Text = nbLikes.ToString();
-            Preferences.Set(prefNameLikes, nbLikes);
-        }
 
         protected override void OnAppearing()
         {

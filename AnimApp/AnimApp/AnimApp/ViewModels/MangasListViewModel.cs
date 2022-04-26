@@ -53,13 +53,7 @@ namespace AnimApp.ViewModels
             var stringifiedAnswer = await result.Content.ReadAsStringAsync();
             var mangaDetailResponse = JsonConvert.DeserializeObject<MangasModel.Root>(stringifiedAnswer);
             MangasList = mangaDetailResponse.data;
-            //MangaImage = MangaSelected.attributes?.posterImage?.original ?? "manga.png";
         }
-        //string mangaImage;
-        //public string MangaImage
-        //{
-        //    get { return mangaImage; }
-        //    set { SetProperty(ref mangaImage, value); }
-        //}
+
     }
 }

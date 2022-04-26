@@ -64,7 +64,7 @@
     </ContentPage.Content>-->
 
     <ContentPage.Content>
-        <StackLayout >
+        <StackLayout BackgroundColor="White">
 
             <Grid>
                 <Grid.RowDefinitions>
@@ -100,9 +100,9 @@
                 <StackLayout Grid.Row="2" Grid.Column="1" Orientation="Horizontal" HorizontalOptions="End" Padding="0, 0, 20, 0">
                     <StackLayout HorizontalOptions="Center" Padding="20">
                         <Label Text="Likes" TextColor="#000" FontSize="18"  HorizontalOptions="Center" />
-                        <Label Text="200" TextColor="#000" FontSize="18" HorizontalOptions="Center" x:Name="likes"/>
+                        <Label Text="{Binding ShowNbLike}" TextColor="#000" FontSize="18" HorizontalOptions="Center" x:Name="likes"/>
                     </StackLayout>
-                    <ImageButton BackgroundColor="Transparent" Source="like_button.png" WidthRequest="50" HeightRequest="50" Clicked="Click_To_Like"/>
+                    <ImageButton BackgroundColor="Transparent" Source="like_button.png" WidthRequest="50" HeightRequest="50" Command="{Binding LikeCommand}"/>
                 </StackLayout>
 
                 <ScrollView Grid.Row="3" Padding="20" Grid.ColumnSpan="2">
