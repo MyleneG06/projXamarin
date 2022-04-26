@@ -2,9 +2,9 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <SelectedDevice>Samsung SM-A505FN</SelectedDevice>
-    <ActiveDebugProfile>pixel_5_-_api_30</ActiveDebugProfile>
-    <DefaultDevice>pixel_2_pie_9_0_-_api_28</DefaultDevice>
-    <SelectedPlatformGroup>Emulator</SelectedPlatformGroup>
+    <ActiveDebugProfile>Samsung SM-A505FN</ActiveDebugProfile>
+    <DefaultDevice>pixel_5_-_api_30</DefaultDevice>
+    <SelectedPlatformGroup>PhysicalDevice</SelectedPlatformGroup>
     <ProjectView>ShowAllFiles</ProjectView>
   </PropertyGroup>
 </Project>
