@@ -33,7 +33,7 @@
         
         <ShellContent Title="Animés" Icon="animes.png" Route="AnimesListPage" ContentTemplate="{DataTemplate local:AnimesListPage}" />
         <ShellContent Title="Mangas" Icon="mangas.png" Route="MangasListPage" ContentTemplate="{DataTemplate local:MangasListPage}" />
-        <ShellContent Title="Search" Icon="icon_about.png" Route="TestPage" ContentTemplate="{DataTemplate local:TestPage}" />
+        <!--<ShellContent Title="Search" Icon="icon_about.png" Route="TestPage" ContentTemplate="{DataTemplate local:TestPage}" />-->
         <!--<ShellContent Title="Browse" Icon="icon_feed.png" ContentTemplate="{DataTemplate local:ItemsPage}" />-->
     </TabBar>
 
