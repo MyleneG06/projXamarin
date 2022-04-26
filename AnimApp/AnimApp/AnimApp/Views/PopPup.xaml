@@ -7,7 +7,7 @@
              CloseWhenBackgroundIsClicked="False">
     <StackLayout WidthRequest="500" HeightRequest="400" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="White">
 
-        <WebView Source="https://www.youtube.com/embed/VLT5B26W3PA" WidthRequest="400" HeightRequest="500"/>
+        <WebView Source="{Binding AnimeTrailerId}" WidthRequest="400" HeightRequest="500"/>
         <Button Text="Close" Clicked="ClosePopPup"/>
         
     </StackLayout>

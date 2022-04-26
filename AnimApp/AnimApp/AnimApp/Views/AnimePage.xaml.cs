@@ -49,9 +49,6 @@ namespace AnimApp.Views
             base.OnDisappearing();
         }
 
-        private void OpenVideo(object sender, EventArgs e)
-        {
-            Navigation.PushPopupAsync(new PopPup());
-        }
+       
     }
 }

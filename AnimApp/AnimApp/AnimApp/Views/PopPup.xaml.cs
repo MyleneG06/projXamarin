@@ -1,4 +1,5 @@
-﻿using Rg.Plugins.Popup.Extensions;
+﻿using AnimApp.ViewModels;
+using Rg.Plugins.Popup.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,9 +14,16 @@ namespace AnimApp.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PopPup : Rg.Plugins.Popup.Pages.PopupPage
     {
-        public PopPup()
+
+
+        private string urlYoutube;
+        readonly PopupViewModel pop;
+        public PopPup(string id)
         {
             InitializeComponent();
+            pop = new PopupViewModel(id);
+            BindingContext = pop;
+            
         }
 
         public void ClosePopPup(object sender, EventArgs e)

@@ -1,5 +1,7 @@
 ﻿using AnimApp.Services;
+using AnimApp.Views;
 using Newtonsoft.Json;
+using Rg.Plugins.Popup.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -83,6 +85,7 @@ namespace AnimApp.ViewModels
             AnimeCover = AnimeSelected.attributes?.coverImage?.original ?? "animeCover.jpg";
             AnimeImage = AnimeSelected.attributes?.posterImage?.original ?? "anime.png";
             AnimeDate = AnimeSelected.attributes?.startDate ?? "unknown date";
+            AnimeTrailerId = AnimeSelected.attributes.youtubeVideoId;
             //AnimeRating = Convert.ToDouble(AnimeSelected.attributes?.averageRating);
             AnimeRating = (AnimeSelected.attributes?.averageRating != null && AnimeSelected.attributes?.averageRating != "") ? Convert.ToDouble(AnimeSelected.attributes?.averageRating) : 0;
             if(AnimeRating == 0)
@@ -138,6 +141,29 @@ namespace AnimApp.ViewModels
         {
             DependencyService.Get<IToastTranslateService>()?.DisplayTranslate(AnimeTitleTranslation);
         }
+
+        string animeTrailerId;
+        public string AnimeTrailerId
+        {
+            get { return animeTrailerId; }
+            set { SetProperty(ref animeTrailerId, value); }
+        }
+
+        public ICommand OpenPopup => new Command(OpenVideo);
+
+            private void OpenVideo()
+            {
+            if(AnimeTrailerId != "")
+            {
+                Application.Current.MainPage.Navigation.PushPopupAsync(new PopPup(AnimeTrailerId));
+            }
+            else
+            {
+                Application.Current.MainPage.DisplayAlert("Error", "La vidéo n'est pas disponible pour le moment.", "Retour");
+
+            }
+                
+            }
     }
 
 
