@@ -17,12 +17,19 @@
                     <DataTemplate>
                         <ViewCell>
                             <StackLayout Padding="20">
-                                <StackLayout Orientation="Vertical" HorizontalOptions="Center">
-                                    <Label Padding="0,0,30,0" FontSize="22" TextColor="#000" Text="{Binding id}" HorizontalOptions="Center"/>
-                                    <Label Padding="0,0,30,0" FontSize="22" TextColor="#000" Text="{Binding attributes.canonicalTitle}" HorizontalOptions="Center"/>
-                                    <Label FontSize="22" TextColor="#000"  Text="{Binding attributes.startDate}" HorizontalOptions="Center"/>
+                                <StackLayout Orientation="Vertical" HorizontalOptions="Start">
+                                    <StackLayout Orientation="Horizontal" Padding="5">
+                                        <Image Source="{Binding attributes.posterImage.original}" WidthRequest="150" HeightRequest="50" />
+                                        <StackLayout WidthRequest="500" Orientation="Vertical" HorizontalOptions="CenterAndExpand">
+                                            <Label Padding="0,0,30,0" FontSize="22" TextColor="#000" Text="{Binding id}" HorizontalOptions="Center"/>
+                                            <Label Padding="0,0,30,0" FontSize="22" TextColor="#000" Text="{Binding attributes.canonicalTitle}" HorizontalOptions="Center"/>
+                                            <Label FontSize="22" TextColor="#000"  Text="{Binding attributes.startDate}" HorizontalOptions="Center"/>
+                                        </StackLayout>
+                                    </StackLayout>
+
                                 </StackLayout>
                             </StackLayout>
+                            
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
