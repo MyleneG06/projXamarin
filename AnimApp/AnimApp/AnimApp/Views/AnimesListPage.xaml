@@ -35,8 +35,6 @@
                 </ListView.ItemTemplate>
             </ListView>
 
-            <!--<Button Text="Refresh Animes List" BackgroundColor="Cyan" TextColor="Black" Command="{Binding GetAnimesList}"/>-->
-
         </StackLayout>
 
     </ContentPage.Content>

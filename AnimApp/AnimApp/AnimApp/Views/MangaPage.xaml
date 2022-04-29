@@ -3,66 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AnimApp.Views.MangaPage"
              Title="{Binding Title}">
-    <!--<ContentPage.Content>
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height=".1*" />
-                <RowDefinition Height=".1*" />
-                <RowDefinition Height=".1*" />
-                <RowDefinition Height="0.6*" />
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-            <Image Source="{Binding MangaCover}" Grid.ColumnSpan="2" Aspect="AspectFill" Grid.RowSpan="2"/>
-            <Frame
-                Grid.Row="1"
-                Grid.RowSpan="2"
-                Grid.ColumnSpan="2"
-                HeightRequest="100"
-                WidthRequest="100"
-                CornerRadius="50"
-                Padding="0"
-                IsClippedToBounds="True"
-                HorizontalOptions="Center"
-                VerticalOptions="Center">
-                <Image Source="{Binding MangaImage}" HeightRequest="50" WidthRequest="50" Aspect="AspectFill" Margin="0"/>
-            </Frame>
-            
-            <StackLayout Grid.Row="2" Padding="20" HorizontalOptions="Center">
-                <Label Text="Vues" TextColor="#000" FontSize="18" HorizontalOptions="Center"/>
-                <Label Text="150" TextColor="#000" FontSize="18" HorizontalOptions="Center" x:Name="views"/>
-            </StackLayout>
-            <StackLayout Grid.Row="2" Grid.Column="1" HorizontalOptions="Center" Padding="20">
-                <Label Text="Likes" TextColor="#000" FontSize="18"  HorizontalOptions="Center" />
-                <Label Text="200" TextColor="#000" FontSize="18" HorizontalOptions="Center" x:Name="likes"/>
-            </StackLayout>
-            
-            <ScrollView Grid.Row="3" Padding="20" Grid.ColumnSpan="2">
-                <StackLayout Padding="10" >
-                    <Label TextColor="#000" Text="{Binding MangaTitle}" FontSize="Title" HorizontalOptions="CenterAndExpand"/>
-                    <ImageButton Source="" WidthRequest="50"/>
-                    
-                    <Label TextColor="#000" Text="Date de debut : 15-24-1990" FontSize="16"/>
-                    <Label TextColor="#000" Text="Date de fin : 11-06-1995" FontSize="16"/>
-                    <StackLayout Orientation="Horizontal">
-                        <Label TextColor="#000" Text="Rating:" />
-                        <Image Source="rate3.png" HeightRequest="30"/>
-                    </StackLayout>
-                    <StackLayout Orientation="Horizontal">
-                        <Label TextColor="#000" Text="Trailer:" />
-                        <ImageButton Source="https://play-lh.googleusercontent.com/lMoItBgdPPVDJsNOVtP26EKHePkwBg-PkuY9NOrc-fumRtTFP4XhpUNk_22syN4Datc" WidthRequest="50"/>
-                    </StackLayout>
-
-                    <Label TextColor="#000" Text="Synopsis: Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations Informations " HorizontalTextAlignment="Start"/>
-                    <Button Text="Refresh Manga Details" BackgroundColor="Cyan" TextColor="Black" Command="{Binding GetMangaDetails}"/>
-
-                </StackLayout>
-            </ScrollView>
-        </Grid>
-    </ContentPage.Content>-->
-
+    
     <ContentPage.Content>
         <StackLayout BackgroundColor="White">
 
@@ -121,10 +62,7 @@
                         </StackLayout>
                         <StackLayout Orientation="Horizontal">
                             
-                            <!--(à remplacer par autre info)--><!--
-                            <Label TextColor="#000" Text="Trailer : " VerticalOptions="Center"/>
-                            <ImageButton Source="https://play-lh.googleusercontent.com/lMoItBgdPPVDJsNOVtP26EKHePkwBg-PkuY9NOrc-fumRtTFP4XhpUNk_22syN4Datc" WidthRequest="50"/>
-                            --><!--(à remplacer par autre info)-->
+                            <!--(si un seul template lien trailer  de l'animé à remplacer par autre info intéressante du manga ou laisser vide)-->
                             
                         </StackLayout>
 
