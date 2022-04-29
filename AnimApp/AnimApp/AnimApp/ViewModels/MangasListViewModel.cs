@@ -17,7 +17,7 @@ namespace AnimApp.ViewModels
         public MangasListViewModel()
         {
             Title = "AniMangApp : liste des mangas";
-            LoadMangasList();
+            LoadMangasList(); // HTTP request : json format deserialisé en MangasList
         }
 
         List<Datum> mangasList;
@@ -52,8 +52,17 @@ namespace AnimApp.ViewModels
             var result = await client.GetAsync($"https://kitsu.io/api/edge/manga");
             var stringifiedAnswer = await result.Content.ReadAsStringAsync();
             var mangaDetailResponse = JsonConvert.DeserializeObject<MangasModel.Root>(stringifiedAnswer);
-            MangasList = mangaDetailResponse.data;
+            MangasList = mangaDetailResponse.data;// Resources are paginated in groups of 10 by default and can be increased to a maximum of 20.
         }
+
+        //PAGINATION
+        //supported via limit and offset :      /anime?page[limit]=5&page[offset]=0
+        //The response will include URLs for the first, next and last page of resources in the links object based on your request.
+        //    "links": {
+        //"first": "https://kitsu.io/api/edge/anime?page[limit]=5&page[offset]=0",
+        //"next": "https://kitsu.io/api/edge/anime?page[limit]=5&page[offset]=5",
+        //"last": "https://kitsu.io/api/edge/anime?page[limit]=5&page[offset]=12062"
+        //}
 
     }
 }

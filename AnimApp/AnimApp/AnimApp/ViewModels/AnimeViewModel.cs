@@ -27,14 +27,12 @@ namespace AnimApp.ViewModels
             get { return animeTitle; }
             set { SetProperty(ref animeTitle, value); }
         }
-
         int animeId;
         public int AnimeId
         {
             get { return animeId; }
             set { SetProperty(ref animeId, value); }
         }
-
         string animeCover;
         public string AnimeCover
         {
@@ -71,35 +69,49 @@ namespace AnimApp.ViewModels
             get { return animeRatingImage; }
             set { SetProperty(ref animeRatingImage, value); }
         }
-        string animeTitleTranslation;
-        public string AnimeTitleTranslation
-        {
-            get { return animeTitleTranslation; }
-            set { SetProperty(ref animeTitleTranslation, value); }
-        }
         string showNbLike;
         public string ShowNbLike
         {
             get { return showNbLike; }
             set { SetProperty(ref showNbLike, value); }
         }
-
+        string animeTitleTranslation;
+        public string AnimeTitleTranslation
+        {
+            get { return animeTitleTranslation; }
+            set { SetProperty(ref animeTitleTranslation, value); }
+        }
+        string animeTrailerId;
+        public string AnimeTrailerId
+        {
+            get { return animeTrailerId; }
+            set { SetProperty(ref animeTrailerId, value); }
+        }
 
         public void LoadAnimeDetails(Datum AnimeSelected)
         {
             AnimeTitle = AnimeSelected.attributes.canonicalTitle ?? "Anime title";
+            AnimeTitleTranslation = AnimeSelected.attributes?.titles?.ja_jp ?? "no traduction available";
             AnimeId = Convert.ToInt32(AnimeSelected.id);
             AnimeCover = AnimeSelected.attributes?.coverImage?.original ?? "animeCover.jpg";
             AnimeImage = AnimeSelected.attributes?.posterImage?.original ?? "anime.png";
             AnimeDate = AnimeSelected.attributes?.startDate ?? "unknown date";
             AnimeTrailerId = AnimeSelected.attributes.youtubeVideoId;
-            //AnimeRating = Convert.ToDouble(AnimeSelected.attributes?.averageRating);
             AnimeRating = (AnimeSelected.attributes?.averageRating != null && AnimeSelected.attributes?.averageRating != "") ? Convert.ToDouble(AnimeSelected.attributes?.averageRating) : 0;
-            if(AnimeRating == 0)
+            getRatingImage(AnimeRating); //algo rating
+            AnimeDescription = AnimeSelected.attributes?.description.ToString() ?? "unknown description";
+            
+            prefNameLikes += AnimeTitle;
+            nbLikes = Preferences.Get(prefNameLikes, 0);
+            ShowNbLike = nbLikes.ToString();
+        }
+         private void getRatingImage(double AnimeRating)
+        {
+            if (AnimeRating == 0)
             {
                 AnimeRatingImage = "rating0.png";
             }
-            else if(AnimeRating > 0 && AnimeRating <= 10)
+            else if (AnimeRating > 0 && AnimeRating <= 10)
             {
                 AnimeRatingImage = "rating10.png";
             }
@@ -139,25 +151,12 @@ namespace AnimApp.ViewModels
             {
                 AnimeRatingImage = "rating100.png";
             }
-            AnimeDescription = AnimeSelected.attributes?.description.ToString() ?? "unknown description";
-            AnimeTitleTranslation = AnimeSelected.attributes?.titles?.ja_jp ?? "no traduction available";
-
-            prefNameLikes += AnimeTitle;
-            nbLikes = Preferences.Get(prefNameLikes, 0);
-            ShowNbLike = nbLikes.ToString();
         }
 
         public ICommand ToastTranslateCommand => new Command(ToastTranslate);
         private void ToastTranslate(object obj)
         {
             DependencyService.Get<IToastTranslateService>()?.DisplayTranslate(AnimeTitleTranslation);
-        }
-
-        string animeTrailerId;
-        public string AnimeTrailerId
-        {
-            get { return animeTrailerId; }
-            set { SetProperty(ref animeTrailerId, value); }
         }
 
         public ICommand OpenPopup => new Command(OpenVideo);
