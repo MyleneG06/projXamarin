@@ -20,6 +20,7 @@ namespace AnimApp.ViewModels
             LoadMangaDetails(MangaSelected);
         }
 
+        // Variable bindée pour le titre du manga.
         string mangaTitle;
         public string MangaTitle
         {
@@ -27,6 +28,7 @@ namespace AnimApp.ViewModels
             set { SetProperty(ref mangaTitle, value); }
         }
 
+        // Variable bindée pour l'id du manga.
         int mangaId;
         public int MangaId
         {
@@ -34,48 +36,63 @@ namespace AnimApp.ViewModels
             set { SetProperty(ref mangaId, value); }
         }
 
+        // Variable bindée pour la photo de background du manga.
         string mangaCover;
         public string MangaCover
         {
             get { return mangaCover; }
             set { SetProperty(ref mangaCover, value); }
         }
+
+        // Variable bindée pour la photo du manga.
         string mangaImage;
         public string MangaImage
         {
             get { return mangaImage; }
             set { SetProperty(ref mangaImage, value); }
         }
+
+        // Variable bindée pour le synopsis du manga.
         string mangaDescription;
         public string MangaDescription
         {
             get { return mangaDescription; }
             set { SetProperty(ref mangaDescription, value); }
         }
+
+        // Variable bindée pour la date de sortie du manga.
         string mangaDate;
         public string MangaDate
         {
             get { return mangaDate; }
             set { SetProperty(ref mangaDate, value); }
         }
+
+        // Variable bindée pour le rating du manga.
         double mangaRating;
         public double MangaRating
         {
             get { return mangaRating; }
             set { SetProperty(ref mangaRating, value); }
         }
+
+        // Variable bindée pour l'image (étoiles) du rating du manga.
         string mangaRatingImage;
         public string MangaRatingImage
         {
             get { return mangaRatingImage; }
             set { SetProperty(ref mangaRatingImage, value); }
         }
+
+        // Variable bindée pour la traduction en japonais du titre du manga.
         string mangaTitleTranslation;
         public string MangaTitleTranslation
         {
             get { return mangaTitleTranslation; }
             set { SetProperty(ref mangaTitleTranslation, value); }
         }
+
+        // Variable bindée pour le nombre de likes du manga.
         string showNbLike;
         public string ShowNbLike
         {
@@ -85,6 +102,7 @@ namespace AnimApp.ViewModels
 
         public MangasModel.Datum MangaSelected { get; }
 
+        // Fonction d'attribution des informations récupérées via l'API dans les variables bindées à la page XML.
         public void LoadMangaDetails(Datum MangaSelected)
         {
             MangaTitle = MangaSelected.attributes.canonicalTitle ?? "Manga title";
@@ -92,7 +110,6 @@ namespace AnimApp.ViewModels
             MangaCover = MangaSelected.attributes?.coverImage?.original ?? "mangaCover.jpg";
             MangaImage = MangaSelected.attributes?.posterImage?.original ?? "manga.png";
             MangaDate = MangaSelected.attributes?.startDate ?? "unknown date";
-            //MangaRating = Convert.ToDouble(MangaSelected.attributes?.averageRating);
             MangaRating = (MangaSelected.attributes?.averageRating != null && MangaSelected.attributes?.averageRating != "") ? Convert.ToDouble(MangaSelected.attributes?.averageRating) : 0;
             if (MangaRating == 0)
             {
@@ -146,18 +163,17 @@ namespace AnimApp.ViewModels
             ShowNbLike = nbLikes.ToString();
         }
 
+        // Commande bindée pour afficher la pop-up avec la traduction en japonais du titre de l'anime.
         public ICommand ToastTranslateCommand => new Command(ToastTranslate);
         private void ToastTranslate(object obj)
         {
             DependencyService.Get<IToastTranslateService>()?.DisplayTranslate(MangaTitleTranslation);
         }
 
+        // Commande bindée pour ajouter un like à la page du manga lors du clique sur le bouton de like.
         public ICommand LikeCommand => new Command(ClickToLike);
-
         int nbLikes = 0;
         string prefNameLikes = "nbLikesManga";
-
-
         void ClickToLike()
         {
             nbLikes++;
