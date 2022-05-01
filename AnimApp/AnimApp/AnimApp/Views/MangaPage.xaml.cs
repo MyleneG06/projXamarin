@@ -6,7 +6,6 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
 using Xamarin.Forms;
-//using Xamarin.Forms.Xaml;
 
 namespace AnimApp.Views
 {
@@ -17,13 +16,14 @@ namespace AnimApp.Views
         {
             InitializeComponent();
             BindingContext = new MangaViewModel(mangaSelected);
-            prefNameViews += mangaTitle.Text;
-            nbViews = Preferences.Get(prefNameViews, 0);
+            prefNameViews += mangaTitle.Text; // Ajout du titre du manga au nom de la variable préférence pour sauvegarder le nombre de vues.
+            nbViews = Preferences.Get(prefNameViews, 0); // Récupération de la variable préférence si elle existe ou 0 si elle n'existe pas.
         }
 
         int nbViews = 0;
         string prefNameViews = "nbViewsManga";
 
+        // Fonction appelée lorsque la page est chargée et permet d'incrémenter le nombre de vues et de sauvegarder ce nombre dans les Préférences.
         protected override void OnAppearing()
         {
             nbViews++;

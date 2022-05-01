@@ -18,13 +18,14 @@ namespace AnimApp.Views
         {
             InitializeComponent();
             BindingContext = new AnimeViewModel(animeSelected);
-            prefNameViews += animeTitle.Text;
-            nbViews = Preferences.Get(prefNameViews, 0);
+            prefNameViews += animeTitle.Text; // Ajout du titre de l'anime au nom de la variable préférence pour sauvegarder le nombre de vues.
+            nbViews = Preferences.Get(prefNameViews, 0); // Récupération de la variable préférence si elle existe ou 0 si elle n'existe pas.
         }
 
         int nbViews = 0;
         string prefNameViews = "nbViewsAnime";
 
+        // Fonction appelée lorsque la page est chargée et permet d'incrémenter le nombre de vues et de sauvegarder ce nombre dans les Préférences.
         protected override void OnAppearing()
         {
             nbViews++;
