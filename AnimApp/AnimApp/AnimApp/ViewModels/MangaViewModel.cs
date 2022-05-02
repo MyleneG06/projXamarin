@@ -106,11 +106,23 @@ namespace AnimApp.ViewModels
         public void LoadMangaDetails(Datum MangaSelected)
         {
             MangaTitle = MangaSelected.attributes.canonicalTitle ?? "Manga title";
+            MangaTitleTranslation = MangaSelected.attributes?.titles?.ja_jp ?? "no traduction available";
             MangaId = Convert.ToInt32(MangaSelected.id);
             MangaCover = MangaSelected.attributes?.coverImage?.original ?? "mangaCover.jpg";
             MangaImage = MangaSelected.attributes?.posterImage?.original ?? "manga.png";
             MangaDate = MangaSelected.attributes?.startDate ?? "unknown date";
             MangaRating = (MangaSelected.attributes?.averageRating != null && MangaSelected.attributes?.averageRating != "") ? Convert.ToDouble(MangaSelected.attributes?.averageRating) : 0;
+            getRatingImage(MangaRating);//algo rating
+            MangaDescription = MangaSelected.attributes?.description.ToString() ?? "unknown description";
+            
+            prefNameLikes += MangaTitle;
+            nbLikes = Preferences.Get(prefNameLikes, 0);
+            ShowNbLike = nbLikes.ToString();
+        }
+
+        // Fonction de sélection de l'image du rating en fonction du rating (0-100) récupéré via l'API.
+        private void getRatingImage(double MangaRating) 
+        {
             if (MangaRating == 0)
             {
                 MangaRatingImage = "rating0.png";
@@ -155,12 +167,6 @@ namespace AnimApp.ViewModels
             {
                 MangaRatingImage = "rating100.png";
             }
-            MangaDescription = MangaSelected.attributes?.description.ToString() ?? "unknown description";
-            MangaTitleTranslation = MangaSelected.attributes?.titles?.ja_jp ?? "no traduction available";
-            
-            prefNameLikes += MangaTitle;
-            nbLikes = Preferences.Get(prefNameLikes, 0);
-            ShowNbLike = nbLikes.ToString();
         }
 
         // Commande bindée pour afficher la pop-up avec la traduction en japonais du titre de l'anime.
